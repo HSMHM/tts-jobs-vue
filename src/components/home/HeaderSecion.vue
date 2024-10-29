@@ -2,7 +2,7 @@
   <header>
     <div class="page-header bg-gradient-primary min-vh-100">
       <div class="oblique position-absolute top-0 h-100 d-md-block d-none">
-        <picture class="header-tabayn oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-0 ms-n6">
+        <picture class="header-tts-jobs oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-0 ms-n6">
           <source :srcset="webpImage" type="image/webp" />
           <img
             :src="fallbackImage"

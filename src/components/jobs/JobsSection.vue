@@ -1,11 +1,11 @@
 <template>
   <section class="mt-n10 mt-lg-n8">
-    <div class="studies-area position-relative mx-xxl-8 mx-xl-4 mx-lg-3 mx-3 my-4 z-index-2 border-radius-xl">
+    <div class="jobs-area position-relative mx-xxl-8 mx-xl-4 mx-lg-3 mx-3 my-4 z-index-2 border-radius-xl">
       <div class="container">
         <div class="row align-items-center justify-content-center">
-          <div v-for="(study, index) in translatedStudies" :key="index" class="col-lg-4 col-md-6 mb-4">
-            <div class="card mt-3 study-card mx-4">
-              <img class="card-img-top" :src="study.image" alt="study Image" />
+          <div v-for="(job, index) in translatedJobs" :key="index" class="col-lg-4 col-md-6 mb-4">
+            <div class="card mt-3 job-card mx-4">
+              <img class="card-img-top" :src="job.image" alt="job Image" />
               <div class="position-relative overflow-hidden" style="height:50px;margin-top:-50px;">
                 <div class="position-absolute w-100 top-0 z-index-1">
                   <svg class="waves waves-sm" xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 40" preserveAspectRatio="none" shape-rendering="auto">
@@ -26,10 +26,10 @@
                   </svg>
                 </div>
               </div>
-              <div class="card-body study-card-body">
-                <h4>{{ study.title }}</h4>
-                <p class="fixed-lines">{{ study.subtitle }}</p>
-                <a :href="getStudyLink(study.slug)" class="text-primary icon-move-right">
+              <div class="card-body job-card-body">
+                <h4>{{ job.title }}</h4>
+                <p class="fixed-lines">{{ job.subtitle }}</p>
+                <a :href="getJobLink(job.slug)" class="text-primary icon-move-right">
                   {{ $t('study_details_button') }}
                   <font-awesome-icon class="ms-1 text-xs" :icon="arrowIcon()" />
                 </a>
@@ -45,49 +45,49 @@
 <script>
 export default {
   computed: {
-    translatedStudies() {
+    translatedJobs() {
       return [
         {
-          slug: 'study-1',
-          title: this.$t('studies.study-1.title'),
-          subtitle: this.$t('studies.study-1.subtitle'),
-          description: this.$t('studies.study-1.description'),
-          image: '/img/studies/job-1.webp' // Direct path from public folder
+          slug: 'job-1',
+          title: this.$t('jobs.job-1.title'),
+          subtitle: this.$t('jobs.job-1.subtitle'),
+          description: this.$t('jobs.job-1.description'),
+          image: '/img/jobs/study-1.webp' // Direct path from public folder
         },
         {
-          slug: 'study-2',
-          title: this.$t('studies.study-2.title'),
-          subtitle: this.$t('studies.study-2.subtitle'),
-          description: this.$t('studies.study-2.description'),
-          image: '/img/studies/job-2.webp'
+          slug: 'job-2',
+          title: this.$t('jobs.job-2.title'),
+          subtitle: this.$t('jobs.job-2.subtitle'),
+          description: this.$t('jobs.job-2.description'),
+          image: '/img/jobs/study-2.webp'
         },
         {
-          slug: 'study-3',
-          title: this.$t('studies.study-3.title'),
-          subtitle: this.$t('studies.study-3.subtitle'),
-          description: this.$t('studies.study-3.description'),
-          image: '/img/studies/job-3.webp'
+          slug: 'job-3',
+          title: this.$t('jobs.job-3.title'),
+          subtitle: this.$t('jobs.job-3.subtitle'),
+          description: this.$t('jobs.job-3.description'),
+          image: '/img/jobs/study-3.webp'
         },
         {
-          slug: 'study-4',
-          title: this.$t('studies.study-4.title'),
-          subtitle: this.$t('studies.study-4.subtitle'),
-          description: this.$t('studies.study-4.description'),
-          image: '/img/studies/job-4.webp'
+          slug: 'job-4',
+          title: this.$t('jobs.job-4.title'),
+          subtitle: this.$t('jobs.job-4.subtitle'),
+          description: this.$t('jobs.job-4.description'),
+          image: '/img/jobs/study-4.webp'
         },
         {
-          slug: 'study-5',
-          title: this.$t('studies.study-5.title'),
-          subtitle: this.$t('studies.study-5.subtitle'),
-          description: this.$t('studies.study-5.description'),
-          image: '/img/studies/job-5.webp'
+          slug: 'job-5',
+          title: this.$t('jobs.job-5.title'),
+          subtitle: this.$t('jobs.job-5.subtitle'),
+          description: this.$t('jobs.job-5.description'),
+          image: '/img/jobs/study-5.webp'
         },
         {
-          slug: 'study-6',
-          title: this.$t('studies.study-6.title'),
-          subtitle: this.$t('studies.study-6.subtitle'),
-          description: this.$t('studies.study-6.description'),
-          image: '/img/studies/job-6.webp'
+          slug: 'job-6',
+          title: this.$t('jobs.job-6.title'),
+          subtitle: this.$t('jobs.job-6.subtitle'),
+          description: this.$t('jobs.job-6.description'),
+          image: '/img/jobs/study-6.webp'
         }
       ];
     },
@@ -100,9 +100,9 @@ export default {
       return this.isRTL ? ['fas', 'arrow-left'] : ['fas', 'arrow-right'];
     },
     // Generate the study details link based on the current language
-    getStudyLink(slug) {
+    getJobLink(slug) {
       const currentLang = this.$i18n.locale;
-      return currentLang === 'en' ? `/en/studies/${slug}` : `/studies/${slug}`;
+      return currentLang === 'en' ? `/en/jobs/${slug}` : `/jobs/${slug}`;
     }
   }
 };

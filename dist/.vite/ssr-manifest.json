@@ -21,7 +21,7 @@
     "/assets/slick.svg"
   ],
   "\u0000X:/xampp/htdocs/tts-jobs-vue/node_modules/lottie-web/build/player/lottie.js?commonjs-module": [
-    "/assets/lottie-x9_mKD_W.js"
+    "/assets/lottie-De0IcIey.js"
   ],
   "\u0000X:/xampp/htdocs/tts-jobs-vue/node_modules/slick-carousel/slick/slick.js?commonjs-module": [
     "/assets/ajax-loader.gif",
@@ -65,42 +65,42 @@
     "/assets/slick-DWzRxEMf.ttf",
     "/assets/slick.svg"
   ],
-  "../../../img/jobs-tts/study-1.webp": [
+  "../../../img/jobs/study-1.webp": [
     "/assets/ajax-loader.gif",
     "/assets/slick-Bi9J8BMx.eot",
     "/assets/slick-BlUtDIuC.woff",
     "/assets/slick-DWzRxEMf.ttf",
     "/assets/slick.svg"
   ],
-  "../../../img/jobs-tts/study-2.webp": [
+  "../../../img/jobs/study-2.webp": [
     "/assets/ajax-loader.gif",
     "/assets/slick-Bi9J8BMx.eot",
     "/assets/slick-BlUtDIuC.woff",
     "/assets/slick-DWzRxEMf.ttf",
     "/assets/slick.svg"
   ],
-  "../../../img/jobs-tts/study-3.webp": [
+  "../../../img/jobs/study-3.webp": [
     "/assets/ajax-loader.gif",
     "/assets/slick-Bi9J8BMx.eot",
     "/assets/slick-BlUtDIuC.woff",
     "/assets/slick-DWzRxEMf.ttf",
     "/assets/slick.svg"
   ],
-  "../../../img/jobs-tts/study-4.webp": [
+  "../../../img/jobs/study-4.webp": [
     "/assets/ajax-loader.gif",
     "/assets/slick-Bi9J8BMx.eot",
     "/assets/slick-BlUtDIuC.woff",
     "/assets/slick-DWzRxEMf.ttf",
     "/assets/slick.svg"
   ],
-  "../../../img/jobs-tts/study-5.webp": [
+  "../../../img/jobs/study-5.webp": [
     "/assets/ajax-loader.gif",
     "/assets/slick-Bi9J8BMx.eot",
     "/assets/slick-BlUtDIuC.woff",
     "/assets/slick-DWzRxEMf.ttf",
     "/assets/slick.svg"
   ],
-  "../../../img/jobs-tts/study-6.webp": [
+  "../../../img/jobs/study-6.webp": [
     "/assets/ajax-loader.gif",
     "/assets/slick-Bi9J8BMx.eot",
     "/assets/slick-BlUtDIuC.woff",
@@ -121,14 +121,14 @@
     "/assets/slick-DWzRxEMf.ttf",
     "/assets/slick.svg"
   ],
-  "../../../img/logos/jobs-tts/logo-dark.png": [
+  "../../../img/logos/tts-jobs/logo-dark.png": [
     "/assets/ajax-loader.gif",
     "/assets/slick-Bi9J8BMx.eot",
     "/assets/slick-BlUtDIuC.woff",
     "/assets/slick-DWzRxEMf.ttf",
     "/assets/slick.svg"
   ],
-  "../../../img/logos/jobs-tts/logo-white.png": [
+  "../../../img/logos/tts-jobs/logo-white.png": [
     "/assets/ajax-loader.gif",
     "/assets/slick-Bi9J8BMx.eot",
     "/assets/slick-BlUtDIuC.woff",
@@ -682,7 +682,7 @@
     "/assets/slick.svg"
   ],
   "node_modules/lottie-web/build/player/lottie.js": [
-    "/assets/lottie-x9_mKD_W.js"
+    "/assets/lottie-De0IcIey.js"
   ],
   "node_modules/slick-carousel/slick/slick-theme.css": [
     "/assets/ajax-loader.gif",
@@ -908,35 +908,7 @@
     "/assets/slick-DWzRxEMf.ttf",
     "/assets/slick.svg"
   ],
-  "src/locales/ar/privacy_policy.json": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "src/locales/ar/terms_of_use.json": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
   "src/locales/en/general.json": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "src/locales/en/privacy_policy.json": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "src/locales/en/terms_of_use.json": [
     "/assets/ajax-loader.gif",
     "/assets/slick-Bi9J8BMx.eot",
     "/assets/slick-BlUtDIuC.woff",

@@ -1,16 +1,16 @@
 <template>
   <section>
-    <div class="studies-area position-relative mx-xxl-8 mx-xl-4 mx-lg-3 mx-3 my-4 z-index-2 border-radius-xl">
+    <div class="jobs-area position-relative mx-xxl-8 mx-xl-4 mx-lg-3 mx-3 my-4 z-index-2 border-radius-xl">
       <div class="container">
         <div class="row align-items-center justify-content-center">
           <h1 class="text-gradient text-primary mb-2 mt-2">{{ $t('studies_section_title') }}</h1>
           <h2 class="mb-1 text-dark">{{ $t('studies_section_subtitle') }}</h2>
           <div v-if="slickRendered" ref="slickCarousel" class="slick-slider">
-            <div v-for="(study, index) in studies" :key="index">
-              <div class="card study-card mx-4">
+            <div v-for="(job, index) in jobs" :key="index">
+              <div class="card job-card mx-4">
                 <picture>
-                  <source :srcset="study.webpImage" type="image/webp">
-                  <img class="card-img-top" :src="study.image" alt="study Image" loading="lazy" />
+                  <source :srcset="job.webpImage" type="image/webp">
+                  <img class="card-img-top" :src="job.image" alt="job Image" loading="lazy" />
                 </picture>
                 <div class="position-relative overflow-hidden" style="height:50px;margin-top:-50px;">
                   <div class="position-absolute w-100 top-0 z-index-1">
@@ -29,11 +29,11 @@
                     </svg>
                   </div>
                 </div>
-                <div class="card-body study-card-body">
-                  <h4>{{ study.title }}</h4>
-                  <p class="fixed-lines">{{ study.subtitle }}</p>
-                  <a :href="getStudyLink(study.slug)" class="text-primary icon-move-right">
-                    {{ $t('study_details_button') }}
+                <div class="card-body job-card-body">
+                  <h4>{{ job.title }}</h4>
+                  <p class="fixed-lines">{{ job.subtitle }}</p>
+                  <a :href="getjobLink(job.slug)" class="text-primary icon-move-right">
+                    {{ $t('job_details_button') }}
                     <font-awesome-icon class="ms-1 text-xs" :icon="arrowIcon()" />
                   </a>
                 </div>
@@ -54,54 +54,54 @@ export default {
   data() {
     return {
       slickRendered: false,
-      studies: [
+      jobs: [
         {
-          slug: 'study-1',
-          title: this.$t('studies.study-1.title'),
-          subtitle: this.$t('studies.study-1.subtitle'),
-          description: this.$t('studies.study-1.description'),
-          image: '/img/studies/job-1.jpg',  // Updated to direct path from public folder
-          webpImage: '/img/studies/job-1.webp'  // Updated to direct path from public folder
+          slug: 'job-1',
+          title: this.$t('jobs.job-1.title'),
+          subtitle: this.$t('jobs.job-1.subtitle'),
+          description: this.$t('jobs.job-1.description'),
+          image: '/img/jobs/study-1.jpg',  // Updated to direct path from public folder
+          webpImage: '/img/jobs/study-1.webp'  // Updated to direct path from public folder
         },
         {
-          slug: 'study-2',
-          title: this.$t('studies.study-2.title'),
-          subtitle: this.$t('studies.study-2.subtitle'),
-          description: this.$t('studies.study-2.description'),
-          image: '/img/studies/job-2.jpg',
-          webpImage: '/img/studies/job-2.webp'
+          slug: 'job-2',
+          title: this.$t('jobs.job-2.title'),
+          subtitle: this.$t('jobs.job-2.subtitle'),
+          description: this.$t('jobs.job-2.description'),
+          image: '/img/jobs/study-2.jpg',
+          webpImage: '/img/jobs/study-2.webp'
         },
         {
-          slug: 'study-3',
-          title: this.$t('studies.study-3.title'),
-          subtitle: this.$t('studies.study-3.subtitle'),
-          description: this.$t('studies.study-3.description'),
-          image: '/img/studies/job-3.jpg',
-          webpImage: '/img/studies/job-3.webp'
+          slug: 'job-3',
+          title: this.$t('jobs.job-3.title'),
+          subtitle: this.$t('jobs.job-3.subtitle'),
+          description: this.$t('jobs.job-3.description'),
+          image: '/img/jobs/study-3.jpg',
+          webpImage: '/img/jobs/study-3.webp'
         },
         {
-          slug: 'study-4',
-          title: this.$t('studies.study-4.title'),
-          subtitle: this.$t('studies.study-4.subtitle'),
-          description: this.$t('studies.study-4.description'),
-          image: '/img/studies/job-4.jpg',
-          webpImage: '/img/studies/job-4.webp'
+          slug: 'job-4',
+          title: this.$t('jobs.job-4.title'),
+          subtitle: this.$t('jobs.job-4.subtitle'),
+          description: this.$t('jobs.job-4.description'),
+          image: '/img/jobs/study-4.jpg',
+          webpImage: '/img/jobs/study-4.webp'
         },
         {
-          slug: 'study-5',
-          title: this.$t('studies.study-5.title'),
-          subtitle: this.$t('studies.study-5.subtitle'),
-          description: this.$t('studies.study-5.description'),
-          image: '/img/studies/job-5.jpg',
-          webpImage: '/img/studies/job-5.webp'
+          slug: 'job-5',
+          title: this.$t('jobs.job-5.title'),
+          subtitle: this.$t('jobs.job-5.subtitle'),
+          description: this.$t('jobs.job-5.description'),
+          image: '/img/jobs/study-5.jpg',
+          webpImage: '/img/jobs/study-5.webp'
         },
         {
-          slug: 'study-6',
-          title: this.$t('studies.study-6.title'),
-          subtitle: this.$t('studies.study-6.subtitle'),
-          description: this.$t('studies.study-6.description'),
-          image: '/img/studies/job-6.jpg',
-          webpImage: '/img/studies/job-6.webp'
+          slug: 'job-6',
+          title: this.$t('jobs.job-6.title'),
+          subtitle: this.$t('jobs.job-6.subtitle'),
+          description: this.$t('jobs.job-6.description'),
+          image: '/img/jobs/study-6.jpg',
+          webpImage: '/img/jobs/study-6.webp'
         }
       ]
     };
@@ -112,9 +112,9 @@ export default {
     }
   },
   methods: {
-    getStudyLink(slug) {
+    getjobLink(slug) {
       const currentLang = this.$i18n.locale;
-      return currentLang === 'en' ? `/en/studies/${slug}` : `/studies/${slug}`;
+      return currentLang === 'en' ? `/en/jobs/${slug}` : `/jobs/${slug}`;
     },
     arrowIcon() {
       return this.isRTL ? ['fas', 'arrow-left'] : ['fas', 'arrow-right'];

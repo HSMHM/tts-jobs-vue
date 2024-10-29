@@ -17,11 +17,7 @@ import 'vue-toastification/dist/index.css';
 import 'animate.css'; // Import Animate.css
 import router from './router';
 import generalEn from './locales/en/general.json';
-import termsEn from './locales/en/terms_of_use.json';
-import privacyEn from './locales/en/privacy_policy.json';
 import generalAr from './locales/ar/general.json';
-import termsAr from './locales/ar/terms_of_use.json';
-import privacyAr from './locales/ar/privacy_policy.json';
 import VueCookies from 'vue-cookies';
 
 // GTM Import
@@ -31,13 +27,11 @@ import { createGtm } from '@gtm-support/vue-gtm';
 const messages = {
   en: {
     ...generalEn,
-    ...termsEn,
-    ...privacyEn,
+
   },
   ar: {
     ...generalAr,
-    ...termsAr,
-    ...privacyAr,
+ 
   },
 };
 

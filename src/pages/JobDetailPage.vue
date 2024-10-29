@@ -1,7 +1,7 @@
 <template>
   <div>
     <AppNavbar />
-    <StudySection :jobName="jobName" />
+    <JobSection :jobName="jobName" />
     <ContactUsSection />
     <AppFooter />
   </div>
@@ -9,7 +9,7 @@
 
 <script>
 import AppNavbar from '@/components/layout/AppNavbar.vue';
-import StudySection from '@/components/job/JobSection.vue';
+import JobSection from '@/components/job/JobSection.vue';
 import ContactUsSection from '@/components/job/ContactUsSection.vue';
 import AppFooter from '@/components/layout/AppFooter.vue';
 import { useHead } from '@vueuse/head';
@@ -20,7 +20,7 @@ import { useRoute } from 'vue-router';
 export default {
   components: {
     AppNavbar,
-    StudySection,
+    JobSection,
     ContactUsSection,
     AppFooter,
   },
@@ -28,25 +28,23 @@ export default {
     const { t, locale } = useI18n();
     const route = useRoute(); 
 
-    const jobName = computed(() => route.params.jobName || 'study-1');
+    const jobName = computed(() => route.params.jobName || 'job-1');
 
-    // Meta title and description based on the study
-    const studyTitle = computed(() => `${t('homepage_seo_title_1')} | ${t(`studies.${jobName.value}.title`)}`);
-    const studyDescription = computed(() => t(`studies.${jobName.value}.description`));
+    const jobTitle = computed(() => `${t('homepage_seo_title_1')} | ${t(`jobs.${jobName.value}.title`)}`);
+    const jobDescription = computed(() => t(`studies.${jobName.value}.description`));
     
-    const imageUrl = computed(() => `${import.meta.env.VITE_BASE_URL}/assets/img/studies/${jobName.value}.jpg`);  // Use environment variable
+    const imageUrl = computed(() => `${import.meta.env.VITE_BASE_URL}/assets/img/jobs/${jobName.value}.jpg`);  // Use environment variable
 
-    // Updated keywords for the study detail page focused on Tabayn-related SEO
-    const keywords = locale.value === 'en' 
-      ? `Tabayn, Tabayn Company, ${t(`studies.${jobName.value}.title`)} case study, Tabayn web development, Tabayn app designing` 
-      : `تباين, شركة تباين, دراسة حالة ${t(`studies.${jobName.value}.title`)}, تباين لتطوير المواقع, تباين لتصميم التطبيقات`;
+const keywords = locale.value === 'en' 
+  ? `TTS JOBS, TTS JOBS Company, ${t(`jobs.${jobName.value}.title`)} job, TTS JOBS careers, tech transformation jobs` 
+  : `وظائف التحول التقني, شركة وظائف التحول التقني, دراسة حالة ${t(`jobs.${jobName.value}.title`)}, وظائف التحول التقني في مجال التقنية, فرص العمل في التحول التقني`;
 
     useHead({
-      title: studyTitle.value,
+      title: jobTitle.value,
       meta: [
         {
           name: 'description',
-          content: studyDescription.value, 
+          content: jobDescription.value, 
         },
         {
           name: 'keywords',
@@ -54,11 +52,11 @@ export default {
         },
         {
           property: 'og:title',
-          content: studyTitle.value,
+          content: jobTitle.value,
         },
         {
           property: 'og:description',
-          content: studyDescription.value,
+          content: jobDescription.value,
         },
         {
           property: 'og:image',
@@ -66,7 +64,7 @@ export default {
         },
         {
           property: 'og:image:alt',
-          content: studyDescription.value,
+          content: jobDescription.value,
         },
         {
           property: 'og:locale',
@@ -78,11 +76,11 @@ export default {
         },
         {
           name: 'twitter:title',
-          content: studyTitle.value,
+          content: jobTitle.value,
         },
         {
           name: 'twitter:description',
-          content: studyDescription.value,
+          content: jobDescription.value,
         },
         {
           name: 'twitter:image',
@@ -90,27 +88,27 @@ export default {
         },
         {
           name: 'twitter:image:alt',
-          content: studyDescription.value,
+          content: jobDescription.value,
         },
       ],
       link: [
         {
           rel: 'alternate',
           hreflang: 'en',
-          href: `${import.meta.env.VITE_BASE_URL}/en/studies/${jobName.value}`,
+          href: `${import.meta.env.VITE_BASE_URL}/en/jobs/${jobName.value}`,
         },
         {
           rel: 'alternate',
           hreflang: 'ar',
-          href: `${import.meta.env.VITE_BASE_URL}/studies/${jobName.value}`,
+          href: `${import.meta.env.VITE_BASE_URL}/jobs/${jobName.value}`,
         },
       ],
     });
 
     return {
       jobName,
-      studyTitle,
-      studyDescription,
+      jobTitle,
+      jobDescription,
       imageUrl,
     };
   },

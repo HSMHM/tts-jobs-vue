@@ -42,7 +42,7 @@ import { useI18n } from 'vue-i18n';
 const { t, locale } = useI18n();
 const seoTitle = `${t('homepage_seo_title_1')}`;
 const seoDescription = t('homepage_seo_description');
-const imageUrl = `${import.meta.env.VITE_BASE_URL}/img/logos/jobs-tts/meta-dark.png`; // Updated to use environment variable for base URL
+const imageUrl = `${import.meta.env.VITE_BASE_URL}/img/logos/tts-jobs/meta-dark.png`; // Updated to use environment variable for base URL
 const ogImageType = 'image/png';
 const ogImageWidth = '300';
 const ogImageHeight = '300';

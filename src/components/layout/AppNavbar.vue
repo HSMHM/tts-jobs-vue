@@ -88,8 +88,8 @@
 </template>
 
 <script>
-import logoWhite from "/img/logos/jobs-tts/logo-white.png";
-import logoDark from "/img/logos/jobs-tts/logo-dark.png";
+import logoWhite from "/img/logos/tts-jobs/logo-white.png";
+import logoDark from "/img/logos/tts-jobs/logo-dark.png";
 
 export default {
   data() {

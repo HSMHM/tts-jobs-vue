@@ -79,7 +79,7 @@
 
 <script>
 // Use ES module import instead of require
-import navbarBrandImg from '/img/logos/jobs-tts/logo-white.png';
+import navbarBrandImg from '/img/logos/tts-jobs/logo-white.png';
 import wavePattern from '/img/shapes/waves-white.svg';
 import certifiedPartner1 from '/img/logos/gamr.svg';
 import certifiedPartner2 from '/img/logos/cst.svg';

@@ -26,7 +26,7 @@
   padding: 20px;
 }
 
-.header-tabayn {
+.header-tts-jobs {
 
   background-position: right;
 }
@@ -336,13 +336,13 @@
   justify-content: space-between; 
   height: 250px;
 }
-.study-card {
+.job-card {
   display: flex;
   flex-direction: column;
   height: 100%; 
 }
 
-.study-card-body {
+.job-card-body {
   flex-grow: 1; 
   display: flex;
   flex-direction: column;
@@ -437,11 +437,11 @@
 }
 
 
-.studies-area .slick-list{
+.jobs-area .slick-list{
 padding: 4rem 0rem !important;
 }
 
-.studies-area  .slick-dots {
+.jobs-area  .slick-dots {
 
   padding-left: 0;
   padding-bottom: 20PX;

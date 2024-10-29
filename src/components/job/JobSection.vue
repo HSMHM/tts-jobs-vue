@@ -9,8 +9,8 @@
         <div class="row justify-content-center align-items-center">
           <div class="col-lg-6 col-md-8 text-start py-5 me-auto position-relative">
             <div class="position-relative">
-              <h1 class="mt-4 text-white">{{ studyTitle }}</h1>
-              <p class="lead text-white">{{ studySubtitle }}</p>
+              <h1 class="mt-4 text-white">{{ jobTitle }}</h1>
+              <p class="lead text-white">{{ jobSubtitle }}</p>
             </div>
           </div>
         </div>
@@ -22,19 +22,19 @@
       <div class="row align-items-center">
         <div class="col-md-6 mb-auto">
           <div class="description-section position-relative">
-            <p class="lead ms-4 mb-md-5 mb-4">{{ studyDescription }}</p>
+            <p class="lead ms-4 mb-md-5 mb-4">{{ jobDescription }}</p>
             <div class="gradient-lines rounded rounded-4"></div>
           </div>
-          <p><span class="me-2">&#9679;</span> {{ studyPoint1 }}</p>
-          <p><span class="me-2">&#9679;</span> {{ studyPoint2 }}</p>
-          <p><span class="me-2">&#9679;</span> {{ studyPoint3 }}</p>
-          <p><span class="me-2">&#9679;</span> {{ studyPoint4 }}</p>
-          <p><span class="me-2">&#9679;</span> {{ studyPoint5 }}</p>
-          <p><span class="me-2">&#9679;</span> {{ studyPoint6 }}</p>
+          <p><span class="me-2">&#9679;</span> {{ jobPoint1 }}</p>
+          <p><span class="me-2">&#9679;</span> {{ jobPoint2 }}</p>
+          <p><span class="me-2">&#9679;</span> {{ jobPoint3 }}</p>
+          <p><span class="me-2">&#9679;</span> {{ jobPoint4 }}</p>
+          <p><span class="me-2">&#9679;</span> {{ jobPoint5 }}</p>
+          <p><span class="me-2">&#9679;</span> {{ jobPoint6 }}</p>
         </div>
         <div class="col-md-6">
           <div class="blur-shadow-image text-center">
-            <img :src="studyImage" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg max-height-600">
+            <img :src="jobImage" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg max-height-600">
           </div>
         </div>
       </div>
@@ -43,12 +43,12 @@
 </template>
 
 <script>
-import studyImage1 from '/img/jobs-tts/study-1.webp';
-import studyImage2 from '/img/jobs-tts/study-2.webp';
-import studyImage3 from '/img/jobs-tts/study-3.webp';
-import studyImage4 from '/img/jobs-tts/study-4.webp';
-import studyImage5 from '/img/jobs-tts/study-5.webp';
-import studyImage6 from '/img/jobs-tts/study-6.webp';
+import jobImage1 from '/img/jobs/study-1.webp';
+import jobImage2 from '/img/jobs/study-2.webp';
+import jobImage3 from '/img/jobs/study-3.webp';
+import jobImage4 from '/img/jobs/study-4.webp';
+import jobImage5 from '/img/jobs/study-5.webp';
+import jobImage6 from '/img/jobs/study-6.webp';
 
 export default {
   props: {
@@ -58,43 +58,43 @@ export default {
     }
   },
   computed: {
-    studyTitle() {
+    jobTitle() {
       return this.$t(`studies.${this.jobName}.title`, 'Default Title');
     },
-    studySubtitle() {
+    jobSubtitle() {
       return this.$t(`studies.${this.jobName}.subtitle`, 'Default Subtitle');
     },
-    studyDescription() {
+    jobDescription() {
       return this.$t(`studies.${this.jobName}.description`, 'Default Description');
     },
-    studyPoint1() {
+    jobPoint1() {
       return this.$t(`studies.${this.jobName}.point_1`, 'Point 1');
     },
-    studyPoint2() {
+    jobPoint2() {
       return this.$t(`studies.${this.jobName}.point_2`, 'Point 2');
     },
-    studyPoint3() {
+    jobPoint3() {
       return this.$t(`studies.${this.jobName}.point_3`, 'Point 3');
     },
-    studyPoint4() {
+    jobPoint4() {
       return this.$t(`studies.${this.jobName}.point_4`, 'Point 4');
     },
-    studyPoint5() {
+    jobPoint5() {
       return this.$t(`studies.${this.jobName}.point_5`, 'Point 5');
     },
-    studyPoint6() {
+    jobPoint6() {
       return this.$t(`studies.${this.jobName}.point_6`, 'Point 6');
     },
-    studyImage() {
-      const studyImages = {
-        'study-1': studyImage1,
-        'study-2': studyImage2,
-        'study-3': studyImage3,
-        'study-4': studyImage4,
-        'study-5': studyImage5,
-        'study-6': studyImage6,
+    jobImage() {
+      const jobImages = {
+        'study-1': jobImage1,
+        'study-2': jobImage2,
+        'study-3': jobImage3,
+        'study-4': jobImage4,
+        'study-5': jobImage5,
+        'study-6': jobImage6,
       };
-      return studyImages[this.jobName] || studyImages['study-1'];
+      return jobImages[this.jobName] || jobImages['study-1'];
     },
     shareUrl() {
       return `${window.location.origin}/jobs-tts/${this.jobName}`;
