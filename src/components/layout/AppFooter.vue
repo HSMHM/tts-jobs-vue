@@ -6,7 +6,7 @@
         <div class="col-sm-12 col-md-4 text-start">
           <h6 class="text-white font-weight-bolder text-uppercase mb-2">
             <img :src="navbarBrandImg" alt="TTS" class="footer-logo mb-4" />
-          </h6>
+          </h6> 
         </div>
         <div class="col-sm-12 col-md-8 me-auto text-start">
           <div>
@@ -14,7 +14,7 @@
             <ul class="list-unstyled d-flex">
 
               <li class="mb-2">
-                <a class="text-white" href="mailto:noreply@techtrans.live">
+                <a class="text-white" href="mailto:hr@tts.sa">
                   <font-awesome-icon :icon="['fas', 'envelope']" class="me-1" />
                   hr@tts.sa
                 </a>

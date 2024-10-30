@@ -1,10 +1,8 @@
 <template>
   <header class="overflow-hidden">
     <div class="page-header min-vh-35 bg-gradient-dark"></div>
-    <div
-      class="bg-gradient-primary position-relative mx-xxl-8 mx-xl-4 mx-lg-3 mx-3 py-2 z-index-2 border-radius-xl mt-n9">
-      <img src="/img/shapes/waves-white.svg" alt="pattern-lines"
-        class="position-absolute opacity-6 start-0 top-0 w-100">
+    <div class="bg-gradient-primary position-relative mx-xxl-8 mx-xl-4 mx-lg-3 mx-3 py-2 z-index-2 border-radius-xl mt-n9">
+      <img src="/img/shapes/waves-white.svg" alt="pattern-lines" class="position-absolute opacity-6 start-0 top-0 w-100">
       <div class="container position-relative">
         <div class="row justify-content-center align-items-center">
           <div class="col-lg-6 col-md-8 text-start py-5 me-auto position-relative">
@@ -17,44 +15,44 @@
       </div>
     </div>
   </header>
+  
   <section class="container-fluid">
     <div class="row mx-xxl-7 mx-xl-1 mx-lg-0 mx-0">
       <div class="col-md-12">
         <div class="card border shadow-none bg-transparent mt-3">
           <div class="card-body">
             <div class="row justify-content-between p-3 job-action-section">
-
               <div class="col-md-6 text-md-start">
-                <p class="text-muted"><span class="fs-6 fw-bold me-2">{{ $t('date_title') }} : </span>{{ formattedDate
-                  }}
+                <p class="text-muted">
+                  <span class="fs-6 fw-bold me-2">{{ $t('date_title') }} :</span>
+                  {{ formattedDate }}
                 </p>
                 <div class="d-flex align-items-center justify-content-start ms-auto">
-                  <p class="mb-0 fs-6 fw-bold me-2">{{ $t('share_title') }} : </p>
-                  <a :href="`https://twitter.com/share?url=${shareUrl}&text=${jobTitle}`" target="_blank" class="me-2">
-                    <i class="fab fa-twitter"></i>
+                  <p class="mb-0 fs-6 fw-bold me-2">{{ $t('share_title') }} :</p>
+                  <a :href="`https://twitter.com/share?url=${shareUrl}&text=${shareText}`" target="_blank" class="me-2">
+                    <font-awesome-icon :icon="['fab', 'twitter']" class="me-1 p-2 rounded-2 bg-secondary text-white" />
                   </a>
                   <a :href="`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`" target="_blank" class="me-2">
-                    <i class="fab fa-facebook"></i>
+                    <font-awesome-icon :icon="['fab', 'facebook']" class="me-1 p-2 rounded-2 bg-secondary text-white" />
                   </a>
-                  <a :href="`https://www.linkedin.com/shareArticle?mini=true&url=${shareUrl}&title=${jobTitle}`"
-                    target="_blank">
-                    <i class="fab fa-linkedin"></i>
+                  <a :href="`https://www.linkedin.com/shareArticle?mini=true&url=${shareUrl}&title=${jobTitle}`" target="_blank">
+                    <font-awesome-icon :icon="['fab', 'linkedin']" class="me-1 p-2 rounded-2 bg-secondary text-white" />
                   </a>
                 </div>
               </div>
-              <div class="col-md-6 text-md-end  align-self-center">
+              <div class="col-md-6 text-md-end align-self-center">
                 <button class="btn btn-lg btn-rounded btn-primary apply-button mb-0">{{ $t('apply_btn_title') }}</button>
               </div>
-
             </div>
           </div>
         </div>
       </div>
+      
       <div class="col-md-12 mb-5">
         <div class="card border-0 shadow-none bg-transparent mt-3">
           <div class="row justify-content-between">
             <div class="col-md-6 mt-3">
-              <div class="card card text-md-start border shadow-none">
+              <div class="card text-md-start border shadow-none">
                 <div class="card-body">
                   <div class="description-section position-relative">
                     <p class="lead ms-4 mb-md-5 mb-4">{{ $t('card_1_title') }}</p>
@@ -69,7 +67,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-6 mt-3 ">
+            <div class="col-md-6 mt-3">
               <div class="card text-md-start border shadow-none">
                 <div class="card-body">
                   <div class="description-section position-relative">
@@ -93,6 +91,7 @@
 </template>
 
 <script>
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import jobImage1 from '/img/jobs/job-1.png';
 import jobImage2 from '/img/jobs/job-2.png';
 import jobImage3 from '/img/jobs/job-3.png';
@@ -101,6 +100,9 @@ import jobImage5 from '/img/jobs/job-5.png';
 import jobImage6 from '/img/jobs/job-6.png';
 
 export default {
+  components: {
+    FontAwesomeIcon,
+  },
   props: {
     jobName: {
       type: String,
@@ -113,9 +115,6 @@ export default {
     },
     jobSubtitle() {
       return this.$t(`jobs.${this.jobName}.subtitle`, 'Default Subtitle');
-    },
-    jobDescription() {
-      return this.$t(`jobs.${this.jobName}.description`, 'Default Description');
     },
     jobPoint1() {
       return this.$t(`jobs.${this.jobName}.point_1`, 'Point 1');
@@ -157,6 +156,13 @@ export default {
         day: 'numeric',
       });
     },
+    shareText() {
+      return this.$t('share_text', { jobTitle: this.jobTitle });
+    },
   },
 };
 </script>
+
+<style scoped>
+/* Additional scoped styles if needed */
+</style>

@@ -46,7 +46,6 @@ export default defineConfig(({ mode }) => {
       includedRoutes: (paths, routes) => {
         const baseRoutes = [
           '/',
-          '/jobs',
         ];
 
         const jobRoutes = ['/job-1', '/job-2', '/job-3', '/job-4', '/job-5', '/job-6'];
@@ -58,7 +57,7 @@ export default defineConfig(({ mode }) => {
 
         jobRoutes.forEach(jobRoute => {
           languages.forEach(lang => {
-            const jobPath = lang === 'ar' ? `/jobs${jobRoute}` : `/en/jobs${jobRoute}`;
+            const jobPath = lang === 'ar' ? `${jobRoute}` : `/en${jobRoute}`;
             generatedRoutes.push(jobPath);
           });
         });
