@@ -9,62 +9,82 @@
         <div class="row justify-content-center align-items-center">
           <div class="col-lg-6 col-md-8 text-start py-5 me-auto position-relative">
             <div class="position-relative">
-              <h1 class="mt-4 text-white">{{ jobTitle }}</h1>
-              <p class="lead text-white">{{ jobSubtitle }}</p>
+              <h3 class="mt-4 text-white">{{ jobTitle }}</h3>
+              <p class="lead fs-6 text-white mt-3">{{ jobSubtitle }}</p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </header>
-  <section class="">
-    <div class="container-fluid py-5">
-      <div class="card border-2 bg-transparent">
-      <div class="row justify-content-between p-3 job-action-section">
-        <div class="col-md-6 text-md-start">
-          <p class="text-muted"><span class="fs-6 fw-bold me-2">{{ $t('date_title') }} : </span>{{ formattedDate }}</p>
-          <div class="d-flex align-items-center justify-content-start ms-auto">
-            <p class="mb-0 fs-6 fw-bold me-2">{{ $t('share_title') }} : </p>
-            <a :href="`https://twitter.com/share?url=${shareUrl}&text=${jobTitle}`" target="_blank" class="me-2">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a :href="`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`" target="_blank" class="me-2">
-              <i class="fab fa-facebook"></i>
-            </a>
-            <a :href="`https://www.linkedin.com/shareArticle?mini=true&url=${shareUrl}&title=${jobTitle}`"
-              target="_blank">
-              <i class="fab fa-linkedin"></i>
-            </a>
+  <section class="container-fluid">
+    <div class="row mx-xxl-7 mx-xl-1 mx-lg-0 mx-0">
+      <div class="col-md-12">
+        <div class="card border shadow-none bg-transparent mt-3">
+          <div class="card-body">
+            <div class="row justify-content-between p-3 job-action-section">
+
+              <div class="col-md-6 text-md-start">
+                <p class="text-muted"><span class="fs-6 fw-bold me-2">{{ $t('date_title') }} : </span>{{ formattedDate
+                  }}
+                </p>
+                <div class="d-flex align-items-center justify-content-start ms-auto">
+                  <p class="mb-0 fs-6 fw-bold me-2">{{ $t('share_title') }} : </p>
+                  <a :href="`https://twitter.com/share?url=${shareUrl}&text=${jobTitle}`" target="_blank" class="me-2">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a :href="`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`" target="_blank" class="me-2">
+                    <i class="fab fa-facebook"></i>
+                  </a>
+                  <a :href="`https://www.linkedin.com/shareArticle?mini=true&url=${shareUrl}&title=${jobTitle}`"
+                    target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-6 text-md-end  align-self-center">
+                <button class="btn btn-lg btn-rounded btn-primary apply-button mb-0">{{ $t('apply_btn_title') }}</button>
+              </div>
+
+            </div>
           </div>
         </div>
-        <div class="col-md-6 text-md-end  align-self-center">
-          <button class="btn btn-rounded btn-primary apply-button mb-0">{{ $t('apply_btn_title') }}</button>
-        </div>
-
       </div>
-    </div>
-  </div>
-  </section>
-
-  <!-- Job Details Section -->
-  <section class="">
-    <div class="container py-5">
-      <div class="row align-items-center">
-        <div class="col-md-6 mb-auto">
-          <div class="description-section position-relative">
-            <p class="lead ms-4 mb-md-5 mb-4">{{ jobDescription }}</p>
-            <div class="gradient-lines rounded rounded-4"></div>
-          </div>
-          <p><span class="me-2">&#9679;</span> {{ jobPoint1 }}</p>
-          <p><span class="me-2">&#9679;</span> {{ jobPoint2 }}</p>
-          <p><span class="me-2">&#9679;</span> {{ jobPoint3 }}</p>
-          <p><span class="me-2">&#9679;</span> {{ jobPoint4 }}</p>
-          <p><span class="me-2">&#9679;</span> {{ jobPoint5 }}</p>
-          <p><span class="me-2">&#9679;</span> {{ jobPoint6 }}</p>
-        </div>
-        <div class="col-md-6">
-          <div class="blur-shadow-image text-center">
-            <img :src="jobImage" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg max-height-600">
+      <div class="col-md-12 mb-5">
+        <div class="card border-0 shadow-none bg-transparent mt-3">
+          <div class="row justify-content-between">
+            <div class="col-md-6 mt-3">
+              <div class="card card text-md-start border shadow-none">
+                <div class="card-body">
+                  <div class="description-section position-relative">
+                    <p class="lead ms-4 mb-md-5 mb-4">{{ $t('card_1_title') }}</p>
+                    <div class="gradient-lines rounded rounded-4"></div>
+                  </div>
+                  <p><span class="me-2">&#9679;</span> {{ jobPoint1 }}</p>
+                  <p><span class="me-2">&#9679;</span> {{ jobPoint2 }}</p>
+                  <p><span class="me-2">&#9679;</span> {{ jobPoint3 }}</p>
+                  <p><span class="me-2">&#9679;</span> {{ jobPoint4 }}</p>
+                  <p><span class="me-2">&#9679;</span> {{ jobPoint5 }}</p>
+                  <p><span class="me-2">&#9679;</span> {{ jobPoint6 }}</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mt-3 ">
+              <div class="card text-md-start border shadow-none">
+                <div class="card-body">
+                  <div class="description-section position-relative">
+                    <p class="lead ms-4 mb-md-5 mb-4">{{ $t('card_2_title') }}</p>
+                    <div class="gradient-lines rounded rounded-4"></div>
+                  </div>
+                  <p><span class="me-2">&#9679;</span> {{ jobPoint1 }}</p>
+                  <p><span class="me-2">&#9679;</span> {{ jobPoint2 }}</p>
+                  <p><span class="me-2">&#9679;</span> {{ jobPoint3 }}</p>
+                  <p><span class="me-2">&#9679;</span> {{ jobPoint4 }}</p>
+                  <p><span class="me-2">&#9679;</span> {{ jobPoint5 }}</p>
+                  <p><span class="me-2">&#9679;</span> {{ jobPoint6 }}</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -140,4 +160,3 @@ export default {
   },
 };
 </script>
-

@@ -1,6 +1,5 @@
 <template>
   <footer class="footer py-5 bg-gradient-dark position-relative overflow-hidden">
-    <img :src="wavePattern" alt="pattern-lines" class="position-absolute start-0 top-0 w-100 opacity-6" />
 
     <div class="container position-relative">
       <div class="row">
@@ -13,28 +12,17 @@
           <div>
             <h5 class="text-gradient text-primary fw-bold mb-3">{{ $t('footer_contact_us') }}</h5>
             <ul class="list-unstyled d-flex">
+
               <li class="mb-2">
-                <a class="text-white" href="tel:+966112000292">
-                  <font-awesome-icon :icon="['fas', 'phone']" class="me-1" />
-                  0112000292
-                </a>
-              </li>
-              <li class="mb-2 ms-4">
                 <a class="text-white" href="mailto:noreply@techtrans.live">
                   <font-awesome-icon :icon="['fas', 'envelope']" class="me-1" />
-                  noreply@techtrans.live
+                  hr@tts.sa
                 </a>
               </li>
               <li class="mb-2 ms-4">
-                <a class="text-white" href="https://wa.me/966112000292">
-                  <font-awesome-icon :icon="['fab', 'whatsapp']" class="me-1" />
-                  966112000292
-                </a>
-              </li>
-              <li class="mb-2 ms-4">
-                <a class="text-white" href="https://x.com/tts_sa">
-                  <font-awesome-icon :icon="['fab', 'x-twitter']" class="me-1" />
-                  @tts_sa
+                <a class="text-white" href="https://tts.sa">
+                  <font-awesome-icon :icon="['fas', 'globe']" class="me-1" />
+                  tts.sa
                 </a>
               </li>
             </ul>
@@ -52,14 +40,12 @@
 <script>
 // Use ES module import instead of require
 import navbarBrandImg from '/img/logos/tts-jobs/logo-white.png';
-import wavePattern from '/img/shapes/waves-white.svg';
 
 export default {
   data() {
     return {
       currentYear: new Date().getFullYear(),
       navbarBrandImg,
-      wavePattern,
     };
   },
   computed: {

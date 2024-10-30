@@ -48,6 +48,7 @@
         "whatsapp_text": "Check out this Job at TTS Jobs!",
         "telegram_text": "Check out this Job at TTS Jobs!"
     },
+    "apply_btn_title": "Apply for the Job",
     "jobs": {
         "job-1": {
             "title": "Product Manager",
