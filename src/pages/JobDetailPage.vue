@@ -2,7 +2,6 @@
   <div>
     <AppNavbar />
     <JobSection :jobName="jobName" />
-    <ContactUsSection />
     <AppFooter />
   </div>
 </template>
@@ -10,7 +9,6 @@
 <script>
 import AppNavbar from '@/components/layout/AppNavbar.vue';
 import JobSection from '@/components/job/JobSection.vue';
-import ContactUsSection from '@/components/job/ContactUsSection.vue';
 import AppFooter from '@/components/layout/AppFooter.vue';
 import { useHead } from '@vueuse/head';
 import { useI18n } from 'vue-i18n';
@@ -21,7 +19,6 @@ export default {
   components: {
     AppNavbar,
     JobSection,
-    ContactUsSection,
     AppFooter,
   },
   setup() {
@@ -31,7 +28,7 @@ export default {
     const jobName = computed(() => route.params.jobName || 'job-1');
 
     const jobTitle = computed(() => `${t('homepage_seo_title_1')} | ${t(`jobs.${jobName.value}.title`)}`);
-    const jobDescription = computed(() => t(`studies.${jobName.value}.description`));
+    const jobDescription = computed(() => t(`jobs.${jobName.value}.description`));
     
     const imageUrl = computed(() => `${import.meta.env.VITE_BASE_URL}/assets/img/jobs/${jobName.value}.jpg`);  // Use environment variable
 
@@ -95,12 +92,12 @@ const keywords = locale.value === 'en'
         {
           rel: 'alternate',
           hreflang: 'en',
-          href: `${import.meta.env.VITE_BASE_URL}/en/jobs/${jobName.value}`,
+          href: `${import.meta.env.VITE_BASE_URL}/en/${jobName.value}`,
         },
         {
           rel: 'alternate',
           hreflang: 'ar',
-          href: `${import.meta.env.VITE_BASE_URL}/jobs/${jobName.value}`,
+          href: `${import.meta.env.VITE_BASE_URL}/${jobName.value}`,
         },
       ],
     });

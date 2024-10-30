@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomePage from '@/pages/HomePage.vue';
-import StudiesPage from '@/pages/JobsPage.vue';
 import JobDetailPage from '@/pages/JobDetailPage.vue';
 import NotFoundPage from '@/pages/NotFoundPage.vue';
 import i18n from '@/i18n';
@@ -24,13 +23,7 @@ const routes = [
     beforeEnter: (to, from, next) => setLanguageFromPath(to, next),
   },
   {
-    path: '/jobs',
-    name: 'Studies',
-    component: StudiesPage,
-    beforeEnter: (to, from, next) => setLanguageFromPath(to, next),
-  },
-  {
-    path: '/jobs/:jobName',
+    path: '/:jobName',
     name: 'JobDetail',
     component: JobDetailPage,
     beforeEnter: (to, from, next) => setLanguageFromPath(to, next),
@@ -43,13 +36,7 @@ const routes = [
     beforeEnter: (to, from, next) => setLanguageFromPath(to, next),
   },
   {
-    path: '/en/jobs',
-    name: 'JobsEn',
-    component: StudiesPage,
-    beforeEnter: (to, from, next) => setLanguageFromPath(to, next),
-  },
-  {
-    path: '/en/jobs/:jobName',
+    path: '/en/:jobName',
     name: 'JobDetailEn',
     component: JobDetailPage,
     beforeEnter: (to, from, next) => setLanguageFromPath(to, next),

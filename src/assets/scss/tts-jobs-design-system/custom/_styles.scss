@@ -299,7 +299,7 @@
   left: 0;
   width: 12px;
   height: 100%;
-  background: linear-gradient(180deg, #FF0080, #7928CA);
+  background: linear-gradient(180deg, #ce0886, #480683);
   background-size: 200% 200%;
   animation: gradient-animate 3s ease-in-out infinite;
 }
@@ -493,28 +493,120 @@ padding: 4rem 0rem !important;
 }
 
 .swal2-styled.swal2-confirm {
-  background-image:linear-gradient(-310deg, #7928CA 0%, #FF0080 100%);
+  background-image:linear-gradient(-310deg, #480683 0%, #ce0886 100%);
   border-radius: 50px;
   padding: 8px 50px;
 }
 
 .swal2-styled.swal2-confirm:hover {
-  background-color: #cb0c9f;
-  border-color: #cb0c9f;
+  background-color: #ce0886;
+  border-color: #ce0886;
 }
 
 .swal2-styled.swal2-confirm:hover, .swal2-styled.swal2-confirm:focus {
-  background-image:linear-gradient(-310deg, #FF0080 0%, #7928CA 100%) !important; 
+  background-image:linear-gradient(-310deg, #ce0886 0%, #480683 100%) !important; 
 }
 
 .slick-prev:before, .slick-next:before{
   font-family: 'slick';
   font-size: 30px !important;
-  color: #7928CA !important;
+  color: #480683 !important;
 }
  .slick-prev{
   left: -15px !important;
 }
 .slick-next {
   right: 0px !important;
+}
+
+.job-image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease; 
+}
+
+.job-image-wrapper:hover .card-img-top {
+  transform: scale(1.1); 
+}
+
+.job-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-140deg, rgba(72, 6, 131, 0.7) 55%, rgba(206, 8, 134, 0.7) 100%);
+  transition: background 0.3s ease;
+}
+
+
+
+.job-title-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 1;
+}
+
+
+.bg-image-overlay {
+  background-image: url('/img/backgrounds/header-3.jpg'); /* Background image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: scaleX(-1); /* Flip the image horizontally */
+  
+  /* Mask gradient for left and bottom fade */
+  -webkit-mask-image: linear-gradient(to left, rgba(19, 0, 51, 0.5) 50%, rgba(19, 0, 51, 0) 100%), 
+                      linear-gradient(to bottom, rgba(206, 8, 134, 1) 80%, rgba(206, 8, 134, 0) 100%);
+  mask-image: linear-gradient(to left, rgba(19, 0, 51, 0.5) 50%, rgba(19, 0, 51, 0) 100%), 
+               linear-gradient(to bottom, rgba(206, 8, 134, 1) 80%, rgba(206, 8, 134, 0) 100%);
+  mask-composite: intersect;
+  -webkit-mask-composite: destination-in;
+  mask-repeat: no-repeat;
+  overflow: hidden;
+  position: relative;
+}
+
+.bg-image-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Overlay gradient with specified percentages */
+  background: linear-gradient(to left, rgba(19, 0, 51, 0.9), transparent 100%), 
+              linear-gradient(to bottom, rgba(206, 8, 134, 0.5)10%, transparent 100%);
+  z-index: 1;
+}
+
+@media (max-width: 992px) {
+  .bg-image-overlay {
+    background-image: url('/img/backgrounds/header-3.jpg'); /* Background image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Mask gradient for left and bottom fade */
+    -webkit-mask-image: linear-gradient(to right, rgba(19, 0, 51, 0.5) -100%, rgba(19, 0, 51, 0) 100%), 
+                        linear-gradient(to bottom, rgba(206, 8, 134, 1) 0%, rgba(206, 8, 134, 0) 100%);
+    mask-image: linear-gradient(to right, rgba(19, 0, 51, 0.5) -100%, rgba(19, 0, 51, 0) 100%), 
+                 linear-gradient(to bottom, rgba(206, 8, 134, 1) 0%, rgba(206, 8, 134, 0) 100%);
+    mask-composite: intersect;
+    -webkit-mask-composite: destination-in;
+    mask-repeat: no-repeat;
+    overflow: hidden;
+    position: relative;
+  }
 }

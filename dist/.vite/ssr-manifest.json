@@ -1,36 +1,33 @@
 {
-  "\u0000X:/xampp/htdocs/tts-jobs-vue/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js?commonjs-module": [
+  "\u0000O:/OneDrive/Documents/sites/tts-jobs-vue/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js?commonjs-module": [
     "/assets/ajax-loader.gif",
     "/assets/slick-Bi9J8BMx.eot",
     "/assets/slick-BlUtDIuC.woff",
     "/assets/slick-DWzRxEMf.ttf",
     "/assets/slick.svg"
   ],
-  "\u0000X:/xampp/htdocs/tts-jobs-vue/node_modules/jquery/dist/jquery.js?commonjs-es-import": [
+  "\u0000O:/OneDrive/Documents/sites/tts-jobs-vue/node_modules/jquery/dist/jquery.js?commonjs-es-import": [
     "/assets/ajax-loader.gif",
     "/assets/slick-Bi9J8BMx.eot",
     "/assets/slick-BlUtDIuC.woff",
     "/assets/slick-DWzRxEMf.ttf",
     "/assets/slick.svg"
   ],
-  "\u0000X:/xampp/htdocs/tts-jobs-vue/node_modules/jquery/dist/jquery.js?commonjs-module": [
+  "\u0000O:/OneDrive/Documents/sites/tts-jobs-vue/node_modules/jquery/dist/jquery.js?commonjs-module": [
     "/assets/ajax-loader.gif",
     "/assets/slick-Bi9J8BMx.eot",
     "/assets/slick-BlUtDIuC.woff",
     "/assets/slick-DWzRxEMf.ttf",
     "/assets/slick.svg"
   ],
-  "\u0000X:/xampp/htdocs/tts-jobs-vue/node_modules/lottie-web/build/player/lottie.js?commonjs-module": [
-    "/assets/lottie-De0IcIey.js"
-  ],
-  "\u0000X:/xampp/htdocs/tts-jobs-vue/node_modules/slick-carousel/slick/slick.js?commonjs-module": [
+  "\u0000O:/OneDrive/Documents/sites/tts-jobs-vue/node_modules/slick-carousel/slick/slick.js?commonjs-module": [
     "/assets/ajax-loader.gif",
     "/assets/slick-Bi9J8BMx.eot",
     "/assets/slick-BlUtDIuC.woff",
     "/assets/slick-DWzRxEMf.ttf",
     "/assets/slick.svg"
   ],
-  "\u0000X:/xampp/htdocs/tts-jobs-vue/node_modules/vue-cookies/vue-cookies.js?commonjs-module": [
+  "\u0000O:/OneDrive/Documents/sites/tts-jobs-vue/node_modules/vue-cookies/vue-cookies.js?commonjs-module": [
     "/assets/ajax-loader.gif",
     "/assets/slick-Bi9J8BMx.eot",
     "/assets/slick-BlUtDIuC.woff",
@@ -58,119 +55,70 @@
     "/assets/slick-DWzRxEMf.ttf",
     "/assets/slick.svg"
   ],
-  "\u0000vite/preload-helper.js": [
+  "../../../../img/jobs/job-1.png": [
     "/assets/ajax-loader.gif",
     "/assets/slick-Bi9J8BMx.eot",
     "/assets/slick-BlUtDIuC.woff",
     "/assets/slick-DWzRxEMf.ttf",
     "/assets/slick.svg"
   ],
-  "../../../img/jobs/study-1.webp": [
+  "../../../../img/jobs/job-2.png": [
     "/assets/ajax-loader.gif",
     "/assets/slick-Bi9J8BMx.eot",
     "/assets/slick-BlUtDIuC.woff",
     "/assets/slick-DWzRxEMf.ttf",
     "/assets/slick.svg"
   ],
-  "../../../img/jobs/study-2.webp": [
+  "../../../../img/jobs/job-3.png": [
     "/assets/ajax-loader.gif",
     "/assets/slick-Bi9J8BMx.eot",
     "/assets/slick-BlUtDIuC.woff",
     "/assets/slick-DWzRxEMf.ttf",
     "/assets/slick.svg"
   ],
-  "../../../img/jobs/study-3.webp": [
+  "../../../../img/jobs/job-4.png": [
     "/assets/ajax-loader.gif",
     "/assets/slick-Bi9J8BMx.eot",
     "/assets/slick-BlUtDIuC.woff",
     "/assets/slick-DWzRxEMf.ttf",
     "/assets/slick.svg"
   ],
-  "../../../img/jobs/study-4.webp": [
+  "../../../../img/jobs/job-5.png": [
     "/assets/ajax-loader.gif",
     "/assets/slick-Bi9J8BMx.eot",
     "/assets/slick-BlUtDIuC.woff",
     "/assets/slick-DWzRxEMf.ttf",
     "/assets/slick.svg"
   ],
-  "../../../img/jobs/study-5.webp": [
+  "../../../../img/jobs/job-6.png": [
     "/assets/ajax-loader.gif",
     "/assets/slick-Bi9J8BMx.eot",
     "/assets/slick-BlUtDIuC.woff",
     "/assets/slick-DWzRxEMf.ttf",
     "/assets/slick.svg"
   ],
-  "../../../img/jobs/study-6.webp": [
+  "../../../../img/logos/tts-jobs/logo-dark.png": [
     "/assets/ajax-loader.gif",
     "/assets/slick-Bi9J8BMx.eot",
     "/assets/slick-BlUtDIuC.woff",
     "/assets/slick-DWzRxEMf.ttf",
     "/assets/slick.svg"
   ],
-  "../../../img/logos/cst.svg": [
+  "../../../../img/logos/tts-jobs/logo-white.png": [
     "/assets/ajax-loader.gif",
     "/assets/slick-Bi9J8BMx.eot",
     "/assets/slick-BlUtDIuC.woff",
     "/assets/slick-DWzRxEMf.ttf",
     "/assets/slick.svg"
   ],
-  "../../../img/logos/gamr.svg": [
+  "../../../../img/shapes/waves-white.svg": [
     "/assets/ajax-loader.gif",
     "/assets/slick-Bi9J8BMx.eot",
     "/assets/slick-BlUtDIuC.woff",
     "/assets/slick-DWzRxEMf.ttf",
     "/assets/slick.svg"
   ],
-  "../../../img/logos/tts-jobs/logo-dark.png": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "../../../img/logos/tts-jobs/logo-white.png": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "../../../img/shapes/shape-1.svg": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "../../../img/shapes/shape-2.svg": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "../../../img/shapes/shape-3.svg": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "../../../img/shapes/waves-white.svg": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "../../../img/team/team-1.jpeg": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "../../../img/team/team-2.jpeg": [
+  "../../../../img/team/team-1.jpeg": [
     "/assets/ajax-loader.gif",
     "/assets/slick-Bi9J8BMx.eot",
     "/assets/slick-BlUtDIuC.woff",
@@ -317,349 +265,6 @@
     "/assets/slick-DWzRxEMf.ttf",
     "/assets/slick.svg"
   ],
-  "node_modules/axios/lib/adapters/adapters.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/adapters/fetch.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/adapters/xhr.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/axios.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/cancel/CancelToken.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/cancel/CanceledError.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/cancel/isCancel.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/core/Axios.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/core/AxiosError.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/core/AxiosHeaders.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/core/InterceptorManager.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/core/buildFullPath.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/core/dispatchRequest.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/core/mergeConfig.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/core/settle.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/core/transformData.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/defaults/index.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/defaults/transitional.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/env/data.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/helpers/AxiosURLSearchParams.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/helpers/HttpStatusCode.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/helpers/bind.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/helpers/buildURL.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/helpers/combineURLs.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/helpers/composeSignals.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/helpers/cookies.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/helpers/formDataToJSON.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/helpers/isAbsoluteURL.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/helpers/isAxiosError.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/helpers/isURLSameOrigin.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/helpers/null.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/helpers/parseHeaders.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/helpers/parseProtocol.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/helpers/progressEventReducer.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/helpers/resolveConfig.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/helpers/speedometer.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/helpers/spread.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/helpers/throttle.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/helpers/toFormData.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/helpers/toURLEncodedForm.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/helpers/trackStream.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/helpers/validator.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/platform/browser/classes/Blob.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/platform/browser/classes/FormData.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/platform/browser/classes/URLSearchParams.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/platform/browser/index.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/platform/common/utils.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/platform/index.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/axios/lib/utils.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
   "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js": [
     "/assets/ajax-loader.gif",
     "/assets/slick-Bi9J8BMx.eot",
@@ -681,9 +286,6 @@
     "/assets/slick-DWzRxEMf.ttf",
     "/assets/slick.svg"
   ],
-  "node_modules/lottie-web/build/player/lottie.js": [
-    "/assets/lottie-De0IcIey.js"
-  ],
   "node_modules/slick-carousel/slick/slick-theme.css": [
     "/assets/ajax-loader.gif",
     "/assets/slick-Bi9J8BMx.eot",
@@ -699,13 +301,6 @@
     "/assets/slick.svg"
   ],
   "node_modules/slick-carousel/slick/slick.js": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "node_modules/sweetalert2/dist/sweetalert2.esm.all.js": [
     "/assets/ajax-loader.gif",
     "/assets/slick-Bi9J8BMx.eot",
     "/assets/slick-BlUtDIuC.woff",
@@ -789,70 +384,7 @@
     "/assets/slick-DWzRxEMf.ttf",
     "/assets/slick.svg"
   ],
-  "src/components/home/AboutSection.vue": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "src/components/home/AboutSection.vue?vue&type=style&index=0&scoped=f37be99e&lang.css": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "src/components/home/HeaderSecion.vue": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "src/components/home/JobsSection.vue": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "src/components/home/PartnersSection.vue": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "src/components/home/ServicesSection.vue": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "src/components/home/TechnologiesSection.vue": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "src/components/job/ContactUsSection.vue": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
   "src/components/job/JobSection.vue": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "src/components/jobs/ContactUsSection.vue": [
     "/assets/ajax-loader.gif",
     "/assets/slick-Bi9J8BMx.eot",
     "/assets/slick-BlUtDIuC.woff",
@@ -930,13 +462,6 @@
     "/assets/slick.svg"
   ],
   "src/pages/JobDetailPage.vue": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
-  "src/pages/JobsPage.vue": [
     "/assets/ajax-loader.gif",
     "/assets/slick-Bi9J8BMx.eot",
     "/assets/slick-BlUtDIuC.woff",

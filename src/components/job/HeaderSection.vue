@@ -1,11 +1,11 @@
 <template>
   <header class="header-rounded-images">
-    <div class="page-header min-vh-80">
+    <div class="page-header min-vh-23">
       <div class="container">
         <div class="row">
           <div class="col-lg-4 text-lg-start text-center py-sm-0 py-7">
-            <h1 class="text-gradient text-primary">{{ $t('studies_page_title') }}</h1>
-            <p class="text-white fs-5 text-lg-start text-center mt-4">{{ $t('studies_page_subtitle') }}</p>
+            <h1 class="text-gradient text-primary">{{ $t('jobs_page_title') }}</h1>
+            <p class="text-white fs-5 text-lg-start text-center mt-4">{{ $t('jobs_page_subtitle') }}</p>
             <br />
           </div>
           <div class="col-lg-6 text-end position-relative">
