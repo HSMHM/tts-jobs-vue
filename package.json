@@ -8,7 +8,9 @@
     "preview": "vite preview",
     "build:ssg": "vite-ssg build",
     "dev:ssg": "vite-ssg dev",
-    "serve:ssg": "vite preview"
+    "serve:ssg": "vite preview",
+    "deploy": "vite build && git add dist && git commit -m 'Deploy to GitHub Pages' && git subtree push --prefix dist origin gh-pages"
+
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
