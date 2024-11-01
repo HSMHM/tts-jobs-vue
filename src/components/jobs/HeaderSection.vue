@@ -1,7 +1,7 @@
 <template>
   <header class="position-relative bg-image-overlay d-flex align-items-center">
-    <div class="overlay-gradient position-absolute top-0 start-0 w-100 h-100"></div> <!-- Full gradient overlay behind text -->
-    <div class="container position-relative text-center z-2 header-text mt-7 mb-3"> <!-- Position relative with z-index to keep text above overlay -->
+    <div class="overlay-gradient position-absolute top-0 start-0 w-100 h-100"></div>
+    <div class="container position-relative text-center z-2 header-text mt-7 mb-3"> 
       <div class="row justify-content-center">
         <div class="col-lg-6 text-start me-auto">
           <h1 class="text-gradient text-primary">{{ $t('jobs_page_title') }}</h1>

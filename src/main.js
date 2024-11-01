@@ -14,41 +14,40 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import Toast from 'vue-toastification';
 import 'vue-toastification/dist/index.css';
-import 'animate.css'; // Import Animate.css
+import 'animate.css';
 import router from './router';
 import generalEn from './locales/en/general.json';
 import generalAr from './locales/ar/general.json';
+import jobsEn from './locales/en/jobs.json';
+import jobsAr from './locales/ar/jobs.json';
+import countriesEn from "./locales/en/countries.json";
+import countriesAr from "./locales/ar/countries.json";
 import VueCookies from 'vue-cookies';
 
-// GTM Import
-import { createGtm } from '@gtm-support/vue-gtm';
 
-// Setup i18n with messages
 const messages = {
   en: {
     ...generalEn,
-
+    ...jobsEn,
+    ...countriesEn,
   },
   ar: {
     ...generalAr,
- 
+    ...jobsAr,
+    ...countriesAr,
   },
 };
 
-// Set up jQuery globally if needed
 window.$ = window.jQuery = $;
 
-// Add FontAwesome icons
 library.add(fas, far, fab);
 
-// Create the i18n instance
 const i18n = createI18n({
-  locale: 'ar', // Default locale is Arabic
+  locale: 'ar',
   fallbackLocale: 'ar',
   messages,
 });
 
-// Configure Toast notifications
 const toastOptions = {
   transition: "Vue-Toastification__fade",
   maxToasts: 20,
@@ -59,30 +58,23 @@ const toastOptions = {
   pauseOnHover: true,
 };
 
-// Export `createApp` for Vite SSG
-// Export `createApp` for Vite SSG
 export const createApp = ViteSSG(
   App,
   {
-    routes: router.options.routes,  // Use router options for routes
-    base: '/',                      // Optional: specify the base URL
+    routes: router.options.routes,
+    base: '/',
   },
-  ({ app, router }) => {   // Removed `routes` as it's not being used
+  ({ app, router }) => {
     app.use(i18n);
     app.use(Toast, toastOptions);
     app.use(router);
     app.use(VueCookies);
-
-    // Register FontAwesomeIcon globally
     app.component('font-awesome-icon', FontAwesomeIcon);
 
-    // Router navigation guard for setting language based on URL path
     router.beforeEach((to, from, next) => {
-      // Set the language based on whether the URL starts with `/en`
       const isEnglish = to.path.startsWith('/en');
       const lang = isEnglish ? 'en' : 'ar';
 
-      // Update the language and direction if necessary
       if (i18n.global.locale !== lang) {
         i18n.global.locale = lang;
         document.documentElement.lang = lang;
@@ -91,13 +83,5 @@ export const createApp = ViteSSG(
 
       next();
     });
-
-    // Initialize GTM
-    app.use(createGtm({
-      id: 'GTM-PKXWJD8R', // Your GTM ID
-      vueRouter: router,
-      debug: false,
-      loadScript: true,
-    }));
   }
 );

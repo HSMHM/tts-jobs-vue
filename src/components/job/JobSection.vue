@@ -1,86 +1,78 @@
 <template>
-  <header class="overflow-hidden">
-    <div class="page-header min-vh-35 bg-gradient-dark"></div>
-    <div class="bg-gradient-primary position-relative mx-xxl-8 mx-xl-4 mx-lg-3 mx-3 py-2 z-index-2 border-radius-xl mt-n9">
-      <img src="/img/shapes/waves-white.svg" alt="pattern-lines" class="position-absolute opacity-6 start-0 top-0 w-100">
-      <div class="container position-relative">
-        <div class="row justify-content-center align-items-center">
-          <div class="col-lg-6 col-md-8 text-start py-5 me-auto position-relative">
-            <div class="position-relative">
-              <h3 class="mt-4 text-white">{{ jobTitle }}</h3>
-              <p class="lead fs-6 text-white mt-3">{{ jobSubtitle }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-  
-  <section class="container-fluid">
+  <section class="container-fluid job-details">
     <div class="row mx-xxl-7 mx-xl-1 mx-lg-0 mx-0">
-      <div class="col-md-12">
+      <div class="col-md-12 px-0">
         <div class="card border shadow-none bg-transparent mt-3">
-          <div class="card-body">
+          <div class="card-body p-0">
             <div class="row justify-content-between p-3 job-action-section">
-              <div class="col-md-6 text-md-start">
-                <p class="text-muted">
-                  <span class="fs-6 fw-bold me-2">{{ $t('date_title') }} :</span>
-                  {{ formattedDate }}
+              <div class="col-md-6">
+                <p class="text-muted fs-6">
+                  <span class="fw-bold">{{ $t('date_title') }} :</span>
+                  {{ jobDate }}
                 </p>
                 <div class="d-flex align-items-center justify-content-start ms-auto">
                   <p class="mb-0 fs-6 fw-bold me-2">{{ $t('share_title') }} :</p>
                   <a :href="`https://twitter.com/share?url=${shareUrl}&text=${shareText}`" target="_blank" class="me-2">
-                    <font-awesome-icon :icon="['fab', 'twitter']" class="me-1 p-2 rounded-2 bg-secondary text-white" />
+                    <font-awesome-icon :icon="['fab', 'x-twitter']" class="me-1 p-2 rounded-2 bg-secondary text-white" />
                   </a>
                   <a :href="`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`" target="_blank" class="me-2">
                     <font-awesome-icon :icon="['fab', 'facebook']" class="me-1 p-2 rounded-2 bg-secondary text-white" />
                   </a>
-                  <a :href="`https://www.linkedin.com/shareArticle?mini=true&url=${shareUrl}&title=${jobTitle}`" target="_blank">
+                  <a :href="`https://www.linkedin.com/shareArticle?mini=true&url=${shareUrl}&title=${jobTitle}&text=${shareText}`" target="_blank">
                     <font-awesome-icon :icon="['fab', 'linkedin']" class="me-1 p-2 rounded-2 bg-secondary text-white" />
                   </a>
                 </div>
-              </div>
-              <div class="col-md-6 text-md-end align-self-center">
-                <button class="btn btn-lg btn-rounded btn-primary apply-button mb-0">{{ $t('apply_btn_title') }}</button>
               </div>
             </div>
           </div>
         </div>
       </div>
-      
-      <div class="col-md-12 mb-5">
+
+      <div class="col-md-12">
         <div class="card border-0 shadow-none bg-transparent mt-3">
           <div class="row justify-content-between">
-            <div class="col-md-6 mt-3">
+            <div class="col-md-6 mt-3 px-0 px-md-2">
               <div class="card text-md-start border shadow-none">
+                <div class="card-header bg-secondary">
+                  <h6 class="text-white mb-0">{{ $t('job_task_title') }}</h6>
+                </div>
                 <div class="card-body">
-                  <div class="description-section position-relative">
-                    <p class="lead ms-4 mb-md-5 mb-4">{{ $t('card_1_title') }}</p>
-                    <div class="gradient-lines rounded rounded-4"></div>
+                  <div v-for="(task, index) in jobTasks" :key="index">
+                    <p>
+                      <font-awesome-icon :icon="['fas', 'check']" class="me-2 text-primary" />
+                      {{ task }}
+                    </p>
                   </div>
-                  <p><span class="me-2">&#9679;</span> {{ jobPoint1 }}</p>
-                  <p><span class="me-2">&#9679;</span> {{ jobPoint2 }}</p>
-                  <p><span class="me-2">&#9679;</span> {{ jobPoint3 }}</p>
-                  <p><span class="me-2">&#9679;</span> {{ jobPoint4 }}</p>
-                  <p><span class="me-2">&#9679;</span> {{ jobPoint5 }}</p>
-                  <p><span class="me-2">&#9679;</span> {{ jobPoint6 }}</p>
                 </div>
               </div>
             </div>
-            <div class="col-md-6 mt-3">
+            <div class="col-md-6 mt-3 px-0 px-md-2">
               <div class="card text-md-start border shadow-none">
-                <div class="card-body">
-                  <div class="description-section position-relative">
-                    <p class="lead ms-4 mb-md-5 mb-4">{{ $t('card_2_title') }}</p>
-                    <div class="gradient-lines rounded rounded-4"></div>
-                  </div>
-                  <p><span class="me-2">&#9679;</span> {{ jobPoint1 }}</p>
-                  <p><span class="me-2">&#9679;</span> {{ jobPoint2 }}</p>
-                  <p><span class="me-2">&#9679;</span> {{ jobPoint3 }}</p>
-                  <p><span class="me-2">&#9679;</span> {{ jobPoint4 }}</p>
-                  <p><span class="me-2">&#9679;</span> {{ jobPoint5 }}</p>
-                  <p><span class="me-2">&#9679;</span> {{ jobPoint6 }}</p>
+                <div class="card-header bg-secondary">
+                  <h6 class="text-white mb-0">{{ $t('job_experiences_title') }}</h6>
                 </div>
+                <div class="card-body">
+                  <div v-for="(experience, index) in jobExperiences" :key="index">
+                    <p>
+                      <font-awesome-icon :icon="['fas', 'check']" class="me-2 text-primary" />
+                      {{ experience }}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <div class="card border-0 shadow-none bg-transparent my-4">
+          <div class="card-body p-0">
+            <div class="row justify-content-between p-3 job-action-section">
+              <div class="col-md-12 text-center mt-5 mt-md-0 align-self-center">
+                <button class="btn btn-lg btn-rounded btn-primary apply-button mb-0" @click="openModal">
+                  {{ $t('apply_btn_title') }}
+                </button>
               </div>
             </div>
           </div>
@@ -88,20 +80,18 @@
       </div>
     </div>
   </section>
+
+  <JobApplicationModal :isOpen="isModalOpen" :jobTitle="jobTitle" @close="closeModal" />
 </template>
 
 <script>
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import jobImage1 from '/img/jobs/job-1.png';
-import jobImage2 from '/img/jobs/job-2.png';
-import jobImage3 from '/img/jobs/job-3.png';
-import jobImage4 from '/img/jobs/job-4.png';
-import jobImage5 from '/img/jobs/job-5.png';
-import jobImage6 from '/img/jobs/job-6.png';
+import JobApplicationModal from '@/components/job/JobApplicationModal.vue';
 
 export default {
   components: {
     FontAwesomeIcon,
+    JobApplicationModal,
   },
   props: {
     jobName: {
@@ -109,60 +99,47 @@ export default {
       required: true,
     },
   },
+  data() {
+    return {
+      isModalOpen: false,
+    };
+  },
   computed: {
+    job() {
+      return this.$i18n.messages[this.$i18n.locale]?.jobs?.[this.jobName] || {};
+    },
     jobTitle() {
-      return this.$t(`jobs.${this.jobName}.title`, 'Default Title');
+      return this.job.title || 'Default Title';
     },
-    jobSubtitle() {
-      return this.$t(`jobs.${this.jobName}.subtitle`, 'Default Subtitle');
+    jobSummary() {
+      return this.job.summary || 'Default Summary';
     },
-    jobPoint1() {
-      return this.$t(`jobs.${this.jobName}.point_1`, 'Point 1');
+    jobDate() {
+      return this.job.date || 'Default Date';
     },
-    jobPoint2() {
-      return this.$t(`jobs.${this.jobName}.point_2`, 'Point 2');
+    jobTasks() {
+      return Object.values(this.job.tasks || {});
     },
-    jobPoint3() {
-      return this.$t(`jobs.${this.jobName}.point_3`, 'Point 3');
-    },
-    jobPoint4() {
-      return this.$t(`jobs.${this.jobName}.point_4`, 'Point 4');
-    },
-    jobPoint5() {
-      return this.$t(`jobs.${this.jobName}.point_5`, 'Point 5');
-    },
-    jobPoint6() {
-      return this.$t(`jobs.${this.jobName}.point_6`, 'Point 6');
+    jobExperiences() {
+      return Object.values(this.job.experiences || {});
     },
     jobImage() {
-      const jobImages = {
-        'job-1': jobImage1,
-        'job-2': jobImage2,
-        'job-3': jobImage3,
-        'job-4': jobImage4,
-        'job-5': jobImage5,
-        'job-6': jobImage6,
-      };
-      return jobImages[this.jobName] || jobImages['job-1'];
+      return `/img/jobs/${this.jobName}.png`;
     },
     shareUrl() {
-      return `${window.location.origin}/jobs-tts/${this.jobName}`;
-    },
-    formattedDate() {
-      const date = new Date();
-      return date.toLocaleDateString('en-US', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric',
-      });
+      return `${window.location.origin}/${this.jobName}`;
     },
     shareText() {
       return this.$t('share_text', { jobTitle: this.jobTitle });
     },
   },
+  methods: {
+    openModal() {
+      this.isModalOpen = true;
+    },
+    closeModal() {
+      this.isModalOpen = false;
+    },
+  },
 };
 </script>
-
-<style scoped>
-/* Additional scoped styles if needed */
-</style>

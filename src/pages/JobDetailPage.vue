@@ -1,6 +1,7 @@
 <template>
   <div>
     <AppNavbar />
+    <HeaderSection :jobName="jobName" />
     <JobSection :jobName="jobName" />
     <AppFooter />
   </div>
@@ -8,33 +9,41 @@
 
 <script>
 import AppNavbar from '@/components/layout/AppNavbar.vue';
+import HeaderSection from '@/components/job/HeaderSection.vue';
 import JobSection from '@/components/job/JobSection.vue';
 import AppFooter from '@/components/layout/AppFooter.vue';
 import { useHead } from '@vueuse/head';
 import { useI18n } from 'vue-i18n';
 import { computed } from 'vue';
-import { useRoute } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
 
 export default {
   components: {
     AppNavbar,
+    HeaderSection,
     JobSection,
     AppFooter,
   },
   setup() {
     const { t, locale } = useI18n();
-    const route = useRoute(); 
+    const route = useRoute();
+    const router = useRouter();
 
-    const jobName = computed(() => route.params.jobName || 'job-1');
+    const jobName = computed(() => `job-${route.params.id}`);
+    const validJobIds = Array.from({ length: 12 }, (_, i) => i + 1);
+
+    if (!validJobIds.includes(parseInt(route.params.id, 10))) {
+      router.replace('/404');
+    }
 
     const jobTitle = computed(() => `${t('homepage_seo_title_1')} | ${t(`jobs.${jobName.value}.title`)}`);
-    const jobDescription = computed(() => t(`jobs.${jobName.value}.description`));
-    
-    const imageUrl = computed(() => `${import.meta.env.VITE_BASE_URL}/assets/img/jobs/${jobName.value}.jpg`);  // Use environment variable
+    const jobDescription = computed(() => t(`jobs.${jobName.value}.summary`));
 
-const keywords = locale.value === 'en' 
-  ? `TTS JOBS, TTS JOBS Company, ${t(`jobs.${jobName.value}.title`)} job, TTS JOBS careers, tech transformation jobs` 
-  : `وظائف التحول التقني, شركة وظائف التحول التقني, دراسة حالة ${t(`jobs.${jobName.value}.title`)}, وظائف التحول التقني في مجال التقنية, فرص العمل في التحول التقني`;
+    const imageUrl = computed(() => `${import.meta.env.VITE_BASE_URL}/assets/img/jobs/${jobName.value}.jpg`);
+
+    const keywords = locale.value === 'en' 
+      ? `TTS JOBS, TTS JOBS Company, ${t(`jobs.${jobName.value}.title`)} job, TTS JOBS careers, tech transformation jobs` 
+      : `وظائف التحول التقني, شركة وظائف التحول التقني, دراسة حالة ${t(`jobs.${jobName.value}.title`)}, وظائف التحول التقني في مجال التقنية, فرص العمل في التحول التقني`;
 
     useHead({
       title: jobTitle.value,
@@ -110,4 +119,5 @@ const keywords = locale.value === 'en'
     };
   },
 };
+
 </script>

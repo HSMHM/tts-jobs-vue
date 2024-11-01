@@ -4,15 +4,15 @@ import JobDetailPage from '@/pages/JobDetailPage.vue';
 import NotFoundPage from '@/pages/NotFoundPage.vue';
 import i18n from '@/i18n';
 
-// Function to set language based on the path
-const setLanguageFromPath = (to, next) => {
+const setLanguageFromPath = (to) => {
   const isEnglish = to.path.startsWith('/en');
   const lang = isEnglish ? 'en' : 'ar';
 
-  i18n.global.locale = lang;
-  document.documentElement.lang = lang;
-  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-  next();
+  if (i18n.global.locale !== lang) {
+    i18n.global.locale = lang;
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  }
 };
 
 const routes = [
@@ -20,37 +20,76 @@ const routes = [
     path: '/',
     name: 'Home',
     component: HomePage,
-    beforeEnter: (to, from, next) => setLanguageFromPath(to, next),
-  },
-  {
-    path: '/:jobName',
-    name: 'JobDetail',
-    component: JobDetailPage,
-    beforeEnter: (to, from, next) => setLanguageFromPath(to, next),
-    props: true,
+    beforeEnter: (to, from, next) => {
+      setLanguageFromPath(to);
+      next();
+    },
   },
   {
     path: '/en',
     name: 'HomeEn',
     component: HomePage,
-    beforeEnter: (to, from, next) => setLanguageFromPath(to, next),
+    beforeEnter: (to, from, next) => {
+      setLanguageFromPath(to);
+      next();
+    },
   },
   {
-    path: '/en/:jobName',
+    path: '/job-:id(\\d+)',
+    name: 'JobDetail',
+    component: JobDetailPage,
+    beforeEnter: (to, from, next) => {
+      setLanguageFromPath(to);
+      const id = parseInt(to.params.id, 10);
+      if (id < 1 || id > 12) {
+        next('/404'); 
+      } else {
+        next();
+      }
+    },
+    props: true,
+  },
+  {
+    path: '/en/job-:id(\\d+)',
     name: 'JobDetailEn',
     component: JobDetailPage,
-    beforeEnter: (to, from, next) => setLanguageFromPath(to, next),
+    beforeEnter: (to, from, next) => {
+      setLanguageFromPath(to);
+      const id = parseInt(to.params.id, 10);
+      if (id < 1 || id > 12) {
+        next('/en/404'); 
+      } else {
+        next();
+      }
+    },
     props: true,
   },
   {
     path: '/404',
     name: 'NotFound',
     component: NotFoundPage,
-    beforeEnter: (to, from, next) => setLanguageFromPath(to, next),
+    beforeEnter: (to, from, next) => {
+      setLanguageFromPath(to);
+      next();
+    },
+  },
+  {
+    path: '/en/404',
+    name: 'NotFoundEn',
+    component: NotFoundPage,
+    beforeEnter: (to, from, next) => {
+      i18n.global.locale = 'en';
+      document.documentElement.lang = 'en';
+      document.documentElement.dir = 'ltr';
+      next();
+    },
   },
   {
     path: '/:catchAll(.*)',
-    redirect: '/404',
+    redirect: (to) => {
+      const isEnglish = to.path.startsWith('/en');
+      return isEnglish ? '/en/404' : '/404';
+    },
   },
 ];
 

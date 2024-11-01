@@ -4,31 +4,60 @@
   border-top-right-radius: 5rem !important;
   border-bottom-right-radius: 5rem !important;
 }
+
+.jobs-area .badge-outline-white{
+  border-color: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: none;
+  text-align: center;
+  border: 0.8px solid ;
+  font-size: 10px;
+}
+
+.job-header .badge-outline-white{
+  border-color: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: none;
+  text-align: center;
+  border: 0.8px solid ;
+  font-size: 12px;
+}
+.job-details p{
+  font-size: 0.85rem;
+}
 .navbar {
   position: fixed;
   top: 0;
   z-index: 3;
   box-shadow: unset;
-  transition: all 0.5s ease; /* Smooth transition for all properties */
+  transition: all 0.5s ease;
+  /* Smooth transition for all properties */
   left: 0;
   right: 0;
-  margin: auto; /* Center the navbar */
-  opacity: 1; /* Initial opacity */
+  margin: auto;
+  /* Center the navbar */
+  opacity: 1;
+  /* Initial opacity */
 
 }
+
 .navbar-hidden {
   opacity: 0;
-  transform: translateY(-100%); /* Move navbar out of view */
+  transform: translateY(-100%);
+  /* Move navbar out of view */
 
 }
+
 .navbar-show {
   opacity: 1;
-  transform: translateY(0); /* Move navbar back into view */
+  transform: translateY(0);
+  /* Move navbar back into view */
   width: 75%;
 }
 
 .content {
-  margin-top: 120px; /* To offset the navbar */
+  margin-top: 120px;
+  /* To offset the navbar */
   padding: 20px;
 }
 
@@ -38,11 +67,11 @@
 }
 
 
-@keyframes shadow-pulse
-{
+@keyframes shadow-pulse {
   0% {
     box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.4);
   }
+
   100% {
     box-shadow: 0 0 7px 25px rgba(0, 112, 244, 0);
   }
@@ -56,7 +85,8 @@
 }
 
 .navbar-brand img {
-  transition: width 0.3s ease; /* Smooth transition */
+  transition: width 0.3s ease;
+  /* Smooth transition */
   width: 130px;
 }
 
@@ -105,10 +135,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    top:-30px;
+    top: -30px;
   }
 
 }
+
 @media screen and (max-width: 370px) {
   .animat-mask {
     position: relative;
@@ -116,7 +147,7 @@
     height: 250px;
     margin-top: 36px;
 
-}
+  }
 }
 
 .oblique {
@@ -131,6 +162,7 @@
   }
 
 }
+
 @media screen and (max-width: 1200px) {
   .oblique {
     width: 80%;
@@ -148,11 +180,13 @@
   height: 100%;
   position: relative;
 }
+
 .swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .swiper-gradient-left,
 .swiper-gradient-right {
   position: absolute;
@@ -162,10 +196,12 @@
   z-index: 10;
   pointer-events: none;
 }
+
 .swiper-gradient-left {
   left: 0;
   background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
 }
+
 .swiper-gradient-right {
   right: 0;
   background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
@@ -179,10 +215,10 @@
   text-overflow: ellipsis;
 }
 
-.animate-header{
+.animate-header {
   display: grid;
-	min-block-size: 95vh;
-	place-content: end;
+  min-block-size: 95vh;
+  place-content: end;
 }
 
 .tag-scrollers {
@@ -192,49 +228,54 @@
 
 
 }
+
 .tag-scroller {
-	display: grid;
-	gap: 1.5rem;
-  
+  display: grid;
+  gap: 1.5rem;
+
 
 }
 
 .tag-list {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	display: flex;
-	flex-wrap: wrap;
-	gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
 
 
 }
 
 @media (prefers-reduced-motion) {
-	.tag-list {
-		flex-flow: row nowrap;
-		overflow: auto;
-		scrollbar-width: none;
-		scrollbar-color: transparent transparent;
-	}
-	.tag-list::-webkit-scrollbar-track {
-		background: transparent;
-	}
-	.tag-list::-webkit-scrollbar-thumb {
-		background: transparent;
-	}
-	.tag-list::-webkit-scrollbar {
-		display: none;
-		width: 0;
-		height: 0;
-	}
+  .tag-list {
+    flex-flow: row nowrap;
+    overflow: auto;
+    scrollbar-width: none;
+    scrollbar-color: transparent transparent;
+  }
+
+  .tag-list::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .tag-list::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+
+  .tag-list::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+  }
 }
 
 .tag-list li {
   position: relative;
   padding: 10px 20px;
   font-size: 1rem;
-  border-radius: 15px; /* Add border radius to the element */
+  border-radius: 15px;
+  /* Add border radius to the element */
   z-index: 0;
   color: $white;
   font-weight: bold;
@@ -245,7 +286,7 @@
   font-style: normal;
   transform: skewX(190deg) !important;
 
- 
+
 }
 
 .tag-list li::before {
@@ -256,38 +297,40 @@
   left: 0;
   right: 0;
   bottom: 0;
-  border-radius: 30px; /* Match the radius of the main element */
-  padding: 3px; /* Adjust padding to control the border width */
+  border-radius: 30px;
+  /* Match the radius of the main element */
+  padding: 3px;
+  /* Adjust padding to control the border width */
   background: linear-gradient(to right, $primary-gradient-state, $primary );
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) content-box, 
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: destination-out;
   mask-composite: exclude;
 }
 
 .tag-scroller.scrolling .tag-list {
-	width: max-content;
-	flex-wrap: nowrap;
-	animation: horizontal-scroll var(--duration) var(--direction, normal) linear infinite;
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: horizontal-scroll var(--duration) var(--direction, normal) linear infinite;
 }
 
 .tag-scroller.scrolling .tag-list:nth-child(even) {
-	--direction: reverse;
+  --direction: reverse;
 }
 
 /* PAUSING THE ANIMATION ON HOVER */
 .tag-scroller:hover .tag-list {
-	animation-play-state: paused;
+  animation-play-state: paused;
 }
 
 @keyframes horizontal-scroll {
-	to {
-		/*	0.75rem FOR HALF THE GAP
+  to {
+    /*	0.75rem FOR HALF THE GAP
 				OF THE .tag-scroller
 		*/
-		transform: translateX(calc(-50% - .75rem));
-	}
+    transform: translateX(calc(-50% - .75rem));
+  }
 }
 
 .service-card {
@@ -314,9 +357,11 @@
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -329,35 +374,38 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
 .work-card {
   display: flex;
   flex-direction: column;
-  height: 100%; 
+  height: 100%;
 }
 
 .work-card-body {
-  flex-grow: 1; 
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; 
+  justify-content: space-between;
   height: 250px;
 }
+
 .job-card {
   display: flex;
   flex-direction: column;
-  height: 100%; 
+  height: 100%;
 }
 
 .job-card-body {
-  flex-grow: 1; 
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; 
+  justify-content: space-between;
   height: 250px;
 }
+
 .card-img-top {
-  height: 230px; 
-  object-fit: cover; 
+  height: 230px;
+  object-fit: cover;
   width: 100%;
 }
 
@@ -381,9 +429,11 @@
 .partners-area .partners-logos-container {
   height: 400px;
 }
+
 .partners-area .partners-logos {
   height: 100%;
 }
+
 .partners-area .partner-logo {
   width: 150px;
   height: 100px;
@@ -397,9 +447,11 @@
 .partners-area .fade-logo {
   opacity: 0;
 }
+
 .partners-area .slick-carousel {
   height: 400px;
 }
+
 .partners-area .slick-active .partner-logo {
   opacity: 1;
 }
@@ -411,43 +463,56 @@
   object-fit: contain;
   filter: brightness(0) invert(1);
 }
+
 @media (max-width: 768px) {
   .partners-area .partner-logo {
     width: 70px;
     height: 70px;
   }
+
   /* Ensure single column on mobile */
-  .partners-area .slick-column-1, .slick-column-2, .slick-column-3, .slick-column-4 {
+  .partners-area .slick-column-1,
+  .slick-column-2,
+  .slick-column-3,
+  .slick-column-4 {
     display: none;
   }
 
-  .partners-area .slick-column-1, .slick-column-2, .slick-column-3 {
-    display: block; /* Show only one column on mobile */
+  .partners-area .slick-column-1,
+  .slick-column-2,
+  .slick-column-3 {
+    display: block;
+    /* Show only one column on mobile */
   }
 }
+
 /* Mobile styling */
 @media (max-width: 490px) {
   .partners-area .slick-column-3 {
     display: none;
   }
-  .partners-area .slick-column-1, .slick-column-2 {
-    display: block; /* Show only one column on mobile */
+
+  .partners-area .slick-column-1,
+  .slick-column-2 {
+    display: block;
+    /* Show only one column on mobile */
   }
 }
 
 .footer-logo {
   width: 150px;
 }
+
 .footer-certified-logo {
   width: 250px;
 }
 
 
-.jobs-area .slick-list{
-padding: 4rem 0rem !important;
+.jobs-area .slick-list {
+  padding: 4rem 0rem !important;
 }
 
-.jobs-area  .slick-dots {
+.jobs-area .slick-dots {
 
   padding-left: 0;
   padding-bottom: 20PX;
@@ -458,6 +523,7 @@ padding: 4rem 0rem !important;
   position: relative;
   overflow: hidden;
 }
+
 .bg-technologies-overlay::before {
   content: '';
   position: absolute;
@@ -469,11 +535,11 @@ padding: 4rem 0rem !important;
   background-size: cover;
   background-position: 100px;
   z-index: 0;
-  transform: scaleX(1); 
+  transform: scaleX(1);
 }
 
 .bg-technologies-overlay.rtl::before {
-  transform: scaleX(-1); 
+  transform: scaleX(-1);
   background-position: -250px;
 }
 
@@ -486,7 +552,8 @@ padding: 4rem 0rem !important;
   background: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
-.bg-technologies-overlay img{
+
+.bg-technologies-overlay img {
   height: 70px;
   width: 100px;
   object-fit: contain;
@@ -494,12 +561,12 @@ padding: 4rem 0rem !important;
   filter: brightness(0) invert(0.3);
 }
 
-.contactus-area img{
+.contactus-area img {
   object-fit: cover;
 }
 
 .swal2-styled.swal2-confirm {
-  background-image:linear-gradient(-310deg, #480683 0%, #ce0886 100%);
+  background-image: linear-gradient(-310deg, #480683 0%, #ce0886 100%);
   border-radius: 50px;
   padding: 8px 50px;
 }
@@ -509,25 +576,30 @@ padding: 4rem 0rem !important;
   border-color: #ce0886;
 }
 
-.swal2-styled.swal2-confirm:hover, .swal2-styled.swal2-confirm:focus {
-  background-image:linear-gradient(-310deg, #ce0886 0%, #480683 100%) !important; 
+.swal2-styled.swal2-confirm:hover,
+.swal2-styled.swal2-confirm:focus {
+  background-image: linear-gradient(-310deg, #ce0886 0%, #480683 100%) !important;
 }
 
-.slick-prev:before, .slick-next:before{
+.slick-prev:before,
+.slick-next:before {
   font-family: 'slick';
   font-size: 30px !important;
   color: #480683 !important;
 }
- .slick-prev{
+
+.slick-prev {
   left: -15px !important;
 }
+
 .slick-next {
   right: 0px !important;
 }
 
-.jobs-header p{
+.jobs-header p {
   line-height: 2.2;
 }
+
 .job-image-wrapper {
   position: relative;
   overflow: hidden;
@@ -536,11 +608,11 @@ padding: 4rem 0rem !important;
 .card-img-top {
   width: 100%;
   height: auto;
-  transition: transform 0.3s ease; 
+  transition: transform 0.3s ease;
 }
 
 .job-image-wrapper:hover .card-img-top {
-  transform: scale(1.1); 
+  transform: scale(1.1);
 }
 
 .job-overlay {
@@ -549,7 +621,7 @@ padding: 4rem 0rem !important;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(-140deg, rgba(72, 6, 131, 0.7) 55%, rgba(206, 8, 134, 0.7) 100%);
+  background: linear-gradient(-180deg, rgba(72, 6, 131, 0.8) 65%, rgba(206, 8, 134, 0.9) 100%);
   transition: background 0.3s ease;
 }
 
@@ -562,6 +634,7 @@ padding: 4rem 0rem !important;
   text-align: center;
   text-decoration: none;
   font-weight: bold;
+  width: 80%;
 }
 
 .bg-image-overlay {
@@ -576,13 +649,31 @@ padding: 4rem 0rem !important;
   align-items: center;
   justify-content: center;
 }
-.header-text{
+
+.header-text {
   transform: scaleX(-1);
-}
-.overlay-gradient {
-  transform: scaleX(-1);
-  background: linear-gradient(to right, rgba(19, 0, 51, 0.9), transparent 250%), 
-              linear-gradient(to top, rgba(206, 8, 134, 0.9) 10%, transparent 100%);
-  
 }
 
+.overlay-gradient {
+  transform: scaleX(-1);
+  background: linear-gradient(to right, rgba(19, 0, 51, 0.9), transparent 250%),
+    linear-gradient(to top, rgba(206, 8, 134, 0.9) 10%, transparent 100%);
+
+}
+
+.page-header {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.page-header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, rgba(19, 0, 51, 0.9), transparent 250%),
+              linear-gradient(to top, rgba(206, 8, 134, 0.9) 10%, transparent 100%);
+  z-index: 0;
+}

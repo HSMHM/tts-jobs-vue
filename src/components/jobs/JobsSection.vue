@@ -7,31 +7,20 @@
             <div class="card px-3 mb-5">
               <div class="row">
                 <!-- Search Field -->
-                <div class="col-lg-5 pt-4 pb-2">
+                <div class="col-lg-4 pt-4 pb-2">
                   <div class="input-group rounded-pill">
-                    <input
-                      type="text"
-                      class="form-control rounded-pill"
-                      :placeholder="$t('search_placeholder')"
-                      v-model="searchQuery"
-                    />
+                    <input type="text" class="form-control rounded-pill" :placeholder="$t('search_placeholder')"
+                      v-model="searchQuery" />
                   </div>
                 </div>
-                
+
                 <!-- Filter Buttons (Responsive) -->
-                <div class="col-lg-7 pt-4 pb-2">
+                <div class="col-lg-12 pt-4 pb-2">
                   <div class="d-flex flex-wrap gap-2">
-                    <button
-                      v-for="filter in filters"
-                      :key="filter.id"
-                      type="button"
-                      class="btn btn-round"
-                      :class="{
-                        'btn-secondary': activeFilter === filter.id,
-                        'btn-outline-secondary': activeFilter !== filter.id
-                      }"
-                      @click="setFilter(filter.id)"
-                    >
+                    <button v-for="filter in filters" :key="filter.id" type="button" class="btn btn-round" :class="{
+                      'btn-secondary': activeFilter === filter.id,
+                      'btn-outline-secondary': activeFilter !== filter.id
+                    }" @click="setFilter(filter.id)">
                       {{ $t(`filters.${filter.id}`) }}
                     </button>
                   </div>
@@ -49,6 +38,12 @@
                   <div class="job-overlay"></div>
                   <h5 class="job-title-overlay fs-5">{{ job.title }}</h5>
                 </a>
+              </div>
+              <div class="tags">
+                <div class="position-absolute  z-3 bottom-5 start-3 justify-content-between">
+                  <span class="badge rounded-pill badge-outline-white mx-1">{{ job.location }}</span>
+                  <span class="badge rounded-pill badge-outline-white mx-1">{{ job.type }}</span>
+                </div>
               </div>
             </div>
           </div>
@@ -69,7 +64,8 @@ export default {
         { id: "hr", label: "HR" },
         { id: "it", label: "IT" },
         { id: "marketing", label: "Marketing" },
-        { id: "executive", label: "Executive" }
+        { id: "executive", label: "Executive" },
+        { id: "sales", label: "Sales" }
       ]
     };
   },
@@ -79,32 +75,104 @@ export default {
         {
           slug: "job-1",
           title: this.$t("jobs.job-1.title"),
-          department: "hr",
+          department: ["sales", "it"],
+          location: this.$t("jobs.job-1.location"),
+          type: this.$t("jobs.job-1.type"),
           image: "/img/jobs/job-1.png"
         },
         {
           slug: "job-2",
           title: this.$t("jobs.job-2.title"),
-          department: "it",
+          department: ["hr"],
+          location: this.$t("jobs.job-2.location"),
+          type: this.$t("jobs.job-2.type"),
           image: "/img/jobs/job-2.png"
         },
         {
           slug: "job-3",
           title: this.$t("jobs.job-3.title"),
-          department: "marketing",
+          department: ["it"],
+          location: this.$t("jobs.job-3.location"),
+          type: this.$t("jobs.job-3.type"),
           image: "/img/jobs/job-3.png"
         },
         {
           slug: "job-4",
           title: this.$t("jobs.job-4.title"),
-          department: "executive",
+          department: ["it"],
+          location: this.$t("jobs.job-4.location"),
+          type: this.$t("jobs.job-4.type"),
+          image: "/img/jobs/job-4.png"
+        },
+        {
+          slug: "job-5",
+          title: this.$t("jobs.job-5.title"),
+          department: ["it"],
+          location: this.$t("jobs.job-5.location"),
+          type: this.$t("jobs.job-5.type"),
+          image: "/img/jobs/job-1.png"
+        },
+        {
+          slug: "job-6",
+          title: this.$t("jobs.job-6.title"),
+          department: ["it"],
+          location: this.$t("jobs.job-6.location"),
+          type: this.$t("jobs.job-6.type"),
+          image: "/img/jobs/job-2.png"
+        },
+        {
+          slug: "job-7",
+          title: this.$t("jobs.job-7.title"),
+          department: ["executive"],
+          location: this.$t("jobs.job-7.location"),
+          type: this.$t("jobs.job-7.type"),
+          image: "/img/jobs/job-3.png"
+        },
+        {
+          slug: "job-8",
+          title: this.$t("jobs.job-8.title"),
+          department: ["it"],
+          location: this.$t("jobs.job-8.location"),
+          type: this.$t("jobs.job-8.type"),
+          image: "/img/jobs/job-4.png"
+        },
+        {
+          slug: "job-9",
+          title: this.$t("jobs.job-9.title"),
+          department: ["it"],
+          location: this.$t("jobs.job-9.location"),
+          type: this.$t("jobs.job-9.type"),
+          image: "/img/jobs/job-1.png"
+        },
+        {
+          slug: "job-10",
+          title: this.$t("jobs.job-10.title"),
+          department: ["marketing"],
+          location: this.$t("jobs.job-10.location"),
+          type: this.$t("jobs.job-10.type"),
+          image: "/img/jobs/job-2.png"
+        },
+        {
+          slug: "job-11",
+          title: this.$t("jobs.job-11.title"),
+          department: ["sales"],
+          location: this.$t("jobs.job-11.location"),
+          type: this.$t("jobs.job-11.type"),
+          image: "/img/jobs/job-3.png"
+        },
+        {
+          slug: "job-12",
+          title: this.$t("jobs.job-12.title"),
+          department: ["it"],
+          location: this.$t("jobs.job-12.location"),
+          type: this.$t("jobs.job-12.type"),
           image: "/img/jobs/job-4.png"
         }
       ];
     },
     filteredJobs() {
       return this.translatedJobs.filter(job => {
-        const matchesFilter = this.activeFilter === "all" || job.department === this.activeFilter;
+        const matchesFilter = this.activeFilter === "all" || job.department.includes(this.activeFilter);
         const matchesSearch = job.title.toLowerCase().includes(this.searchQuery.toLowerCase());
         return this.searchQuery ? matchesSearch : matchesFilter && matchesSearch;
       });
