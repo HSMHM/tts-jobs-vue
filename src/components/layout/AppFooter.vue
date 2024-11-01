@@ -30,7 +30,7 @@
         </div>
         <div class="col-12 pt-2 mt-4 border-top border-primary"></div>
         <div class="col-sm-12 text-center text-md-start px-0">
-          <p class="text-secondary">{{ $t('footer_copyright', { year: currentYear, company: companyName }) }}</p>
+          <p class="text-white">{{ $t('footer_copyright', { year: currentYear, company: companyName }) }}</p>
         </div>
       </div>
     </div>

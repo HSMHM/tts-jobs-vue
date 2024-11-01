@@ -16,8 +16,8 @@
 
                 <!-- Filter Buttons (Responsive) -->
                 <div class="col-lg-12 pt-4 pb-2">
-                  <div class="d-flex flex-wrap gap-2">
-                    <button v-for="filter in filters" :key="filter.id" type="button" class="btn btn-round" :class="{
+                  <div class="d-flex flex-wrap gap-1">
+                    <button v-for="filter in filters" :key="filter.id" type="button" class="btn btn-sm btn-round" :class="{
                       'btn-secondary': activeFilter === filter.id,
                       'btn-outline-secondary': activeFilter !== filter.id
                     }" @click="setFilter(filter.id)">
