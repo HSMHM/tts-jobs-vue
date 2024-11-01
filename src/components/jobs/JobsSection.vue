@@ -4,7 +4,7 @@
       <div class="container">
         <div class="row align-items-center justify-content-center">
           <div class="col-lg-12">
-            <div class="card px-3 mb-5">
+            <div class="card border shadow px-3 mb-5">
               <div class="row">
                 <!-- Search Field -->
                 <div class="col-lg-4 pt-4 pb-2">
@@ -110,7 +110,7 @@ export default {
           department: ["it"],
           location: this.$t("jobs.job-5.location"),
           type: this.$t("jobs.job-5.type"),
-          image: "/img/jobs/job-1.png"
+          image: "/img/jobs/job-5.png"
         },
         {
           slug: "job-6",
@@ -118,7 +118,7 @@ export default {
           department: ["it"],
           location: this.$t("jobs.job-6.location"),
           type: this.$t("jobs.job-6.type"),
-          image: "/img/jobs/job-2.png"
+          image: "/img/jobs/job-6.png"
         },
         {
           slug: "job-7",
@@ -126,7 +126,7 @@ export default {
           department: ["executive"],
           location: this.$t("jobs.job-7.location"),
           type: this.$t("jobs.job-7.type"),
-          image: "/img/jobs/job-3.png"
+          image: "/img/jobs/job-7.png"
         },
         {
           slug: "job-8",
@@ -134,7 +134,7 @@ export default {
           department: ["it"],
           location: this.$t("jobs.job-8.location"),
           type: this.$t("jobs.job-8.type"),
-          image: "/img/jobs/job-4.png"
+          image: "/img/jobs/job-8.png"
         },
         {
           slug: "job-9",
@@ -142,7 +142,7 @@ export default {
           department: ["it"],
           location: this.$t("jobs.job-9.location"),
           type: this.$t("jobs.job-9.type"),
-          image: "/img/jobs/job-1.png"
+          image: "/img/jobs/job-9.png"
         },
         {
           slug: "job-10",
@@ -150,7 +150,7 @@ export default {
           department: ["marketing"],
           location: this.$t("jobs.job-10.location"),
           type: this.$t("jobs.job-10.type"),
-          image: "/img/jobs/job-2.png"
+          image: "/img/jobs/job-10.png"
         },
         {
           slug: "job-11",
@@ -158,7 +158,7 @@ export default {
           department: ["sales"],
           location: this.$t("jobs.job-11.location"),
           type: this.$t("jobs.job-11.type"),
-          image: "/img/jobs/job-3.png"
+          image: "/img/jobs/job-11.png"
         },
         {
           slug: "job-12",
@@ -166,7 +166,7 @@ export default {
           department: ["it"],
           location: this.$t("jobs.job-12.location"),
           type: this.$t("jobs.job-12.type"),
-          image: "/img/jobs/job-4.png"
+          image: "/img/jobs/job-12.png"
         }
       ];
     },

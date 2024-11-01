@@ -70,7 +70,7 @@
           <div class="card-body p-0">
             <div class="row justify-content-between p-3 job-action-section">
               <div class="col-md-12 text-center mt-5 mt-md-0 align-self-center">
-                <button class="btn btn-lg btn-rounded btn-primary apply-button mb-0" @click="openModal">
+                <button class="btn bg-gradient-primary text-white btn-round apply-button btn-lg" @click="openModal">
                   {{ $t('apply_btn_title') }}
                 </button>
               </div>

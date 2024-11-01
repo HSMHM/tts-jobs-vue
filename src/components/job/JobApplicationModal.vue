@@ -105,7 +105,11 @@
                   <input type="file" @change="handleFileUpload" class="form-control" id="resume" accept=".pdf" required />
                 </div>
               </div>
-              <button type="submit" class="btn btn-primary w-100">{{ $t('job_application.submit') }}</button>
+              <div class="row">
+                <div class="col-md-12 text-center">
+                  <button type="submit" class="btn bg-gradient-primary text-white btn-round">{{ $t('job_application.submit') }}</button>
+                </div>
+              </div>
             </form>
           </div>
         </div>
