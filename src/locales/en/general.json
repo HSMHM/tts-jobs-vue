@@ -14,8 +14,8 @@
     "homepage_seo_title_1": "TTS Jobs",
     "homepage_seo_description": "Let's build a success story together.",
     "locale_code": "en_US",
-    "jobs_page_title": "TechTrans Jobs",
-    "jobs_page_subtitle": "Let's build a success story together.",
+    "jobs_page_title": "Job Listings",
+    "jobs_page_subtitle": "Join the TTS team to be part of an interactive, opportunity-rich environment where you can develop your skills and contribute to a shared vision of success.",
     "jobs_seo_description": "TechTrans Jobs",
     "jobs_seo_title": "Jobs",
     "contact_us_description": "We are happy to connect with you and answer all your inquiries. Our innovations contribute to the growth of your business and help you achieve your goals successfully.",
@@ -121,5 +121,13 @@
         "title": "Page Not Found",
         "message": "Sorry, the page you are looking for does not exist.",
         "back_home": "Go back to Home"
+    },
+    "search_placeholder": "Search jobs...",
+    "filters": {
+      "all":"All",
+      "hr": "HR",
+      "it": "IT",
+      "marketing": "Marketing",
+      "executive": "Executive"
     }
 }
