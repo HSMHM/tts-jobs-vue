@@ -204,6 +204,7 @@ export default defineComponent({
         const formDataToSend = {
           fullName: this.formData.fullName,
           email: this.formData.email,
+          contactNumber: this.formData.contactNumber,
           jobTitle: this.jobTitle,
           language: this.$i18n.locale,
         };

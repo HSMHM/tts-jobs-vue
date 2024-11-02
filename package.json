@@ -4,11 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "concurrently \"node server/app.js\" \"vite\"",
-    "build": "concurrently \"node server/app.js\" \"vite build\"",
-    "preview": "concurrently \"node server/app.js\" \"vite preview\"",
-    "build:ssg": "concurrently \"node server/app.js\" \"vite-ssg build\"",
-    "dev:ssg": "concurrently \"node server/app.js\" \"vite-ssg dev\"",
-    "serve:ssg": "concurrently \"node server/app.js\" \"vite preview\""
+    "build": "vite build",
+    "preview": "vite preview",
+    "build:ssg": "vite-ssg build",
+    "dev:ssg": "vite-ssg dev",
+    "serve:ssg": "vite preview",
+    "start": "node server/app.js"
   },
   "dependencies": {
     "@date-io/dayjs": "^3.0.0",
