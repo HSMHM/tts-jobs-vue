@@ -2,7 +2,11 @@ const nodemailer = require('nodemailer');
 const path = require('path');
 require('dotenv').config({ path: '../.env' });
 
-// Initialize nodemailer transporter with environment variables
+// Check if running in Netlify functions
+const isNetlify = __dirname.includes('netlify/functions');
+const viewsPath = isNetlify ? path.join(__dirname, 'views') : path.join(__dirname, '../netlify/functions/views');
+console.log(`Using views path: ${viewsPath}`); // Log the path for verification
+
 const transporter = nodemailer.createTransport({
   host: process.env.MAIL_HOST,
   port: parseInt(process.env.MAIL_PORT, 10),
@@ -17,12 +21,6 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-// Determine the path to the views directory based on the environment
-const isNetlify = __dirname.includes('netlify/functions');
-const viewsPath = isNetlify ? path.join(__dirname, 'views') : path.join(__dirname, '../server/views');
-console.log(`Using views path: ${viewsPath}`); // Log the path for debugging
-
-// Import and configure `nodemailer-express-handlebars`
 const initializeHandlebars = async () => {
   const { default: hbs } = await import('nodemailer-express-handlebars');
   transporter.use(
@@ -40,12 +38,10 @@ const initializeHandlebars = async () => {
   );
 };
 
-// Initialize handlebars configuration
 initializeHandlebars().catch((error) => {
   console.error('Failed to configure handlebars:', error);
 });
 
-// Define the sendMail function
 const sendMail = async (to, subject, template, context) => {
   try {
     const info = await transporter.sendMail({
@@ -63,5 +59,4 @@ const sendMail = async (to, subject, template, context) => {
   }
 };
 
-// Export sendMail as a module
 module.exports = sendMail;
