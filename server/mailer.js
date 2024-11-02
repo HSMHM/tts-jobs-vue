@@ -1,5 +1,5 @@
 const nodemailer = require('nodemailer');
-const emailTemplates = require('./emailTemplates'); // Import the email templates
+const emailTemplates = require('./emailTemplates'); 
 require('dotenv').config({ path: '../.env' });
 
 const transporter = nodemailer.createTransport({
@@ -18,19 +18,17 @@ const transporter = nodemailer.createTransport({
 
 const sendMail = async (to, subject, templateName, context) => {
   try {
-    // Check if the template function exists
     if (typeof emailTemplates[templateName] !== 'function') {
       throw new Error(`Template "${templateName}" not found in emailTemplates.js`);
     }
     
-    // Get the email content by calling the template function with the context
     const html = emailTemplates[templateName](context);
 
     const info = await transporter.sendMail({
       from: `"${process.env.MAIL_FROM_NAME}" <${process.env.MAIL_FROM_ADDRESS}>`,
       to,
       subject,
-      html, // Use the HTML content directly
+      html, 
     });
     console.log(`Email sent: ${info.messageId}`);
     return info;

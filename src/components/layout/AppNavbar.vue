@@ -38,17 +38,15 @@ export default {
   },
   computed: {
     switchLanguageHref() {
-      // Generate href for switching languages
       const newLang = this.$i18n.locale === 'en' ? 'ar' : 'en';
-      const currentPath = this.$route.path.replace(/^\/(en|ar)/, '');  // Remove '/en' or '/ar'
+      const currentPath = this.$route.path.replace(/^\/(en|ar)/, ''); 
 
-      // Ensure the path doesn't end with /en or /ar
       let sanitizedPath = currentPath.endsWith('/') ? currentPath : `${currentPath}/`;
 
       return newLang === 'en' ? `/en${sanitizedPath}` : `${sanitizedPath}`;
     },
     homeLink() {
-      // Dynamic home link depending on the current language
+
       return this.$i18n.locale === 'en' ? '/en' : '/';
     }
   },
@@ -57,7 +55,7 @@ export default {
   },
   methods: {
     getLocalizedLink(routeName) {
-      // Generate a localized link for the given route
+
       const currentLang = this.$i18n.locale;
       return currentLang === 'en' ? `/en/${routeName}` : `/${routeName}`;
     },

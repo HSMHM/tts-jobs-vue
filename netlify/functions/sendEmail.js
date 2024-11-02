@@ -1,4 +1,4 @@
-// netlify/functions/sendEmail.js
+ 
 const sendMail = require('../../server/mailer');
 
 exports.handler = async function (event) {
@@ -7,7 +7,13 @@ exports.handler = async function (event) {
   }
 
   try {
-    const { fullName = 'Applicant', email, jobTitle = 'Position', contactNumber = 'N/A', language } = JSON.parse(event.body);
+    const { 
+      fullName = 'Applicant', 
+      email, 
+      jobTitle = 'Position', 
+      contactNumber = 'N/A', 
+      language,
+    } = JSON.parse(event.body);
 
     const userSubject = language === 'ar' ? 'شكراً لتقديم طلبك' : 'Thank you for your application';
     const adminSubject = language === 'ar' ? 'تم تقديم طلب توظيف جديد' : 'New Job Application Submitted';
@@ -15,8 +21,11 @@ exports.handler = async function (event) {
     const userTemplate = language === 'ar' ? 'userEmail_ar' : 'userEmail';
     const adminTemplate = 'adminEmail';
 
+    const sheetLink = 'https://docs.google.com/spreadsheets/d/1Hrwr_xDyXSGnjZtmGfXhmyb1Ysa-YBGKHIbgA-Um-_U/edit?gid=0#gid=0';
+
     await sendMail(email, userSubject, userTemplate, { fullName, jobTitle });
-    await sendMail('hassan@tts.sa', adminSubject, adminTemplate, { fullName, email, jobTitle, contactNumber });
+
+    await sendMail('hassan@tts.sa', adminSubject, adminTemplate, { fullName, email, jobTitle, contactNumber, sheetLink });
 
     return { statusCode: 200, body: 'Emails sent' };
   } catch (error) {

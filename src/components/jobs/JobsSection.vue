@@ -6,7 +6,7 @@
           <div class="col-lg-12">
             <div class="card border shadow px-3 mb-5">
               <div class="row">
-                <!-- Search Field -->
+
                 <div class="col-lg-4 pt-4 pb-2">
                   <div class="input-group rounded-pill">
                     <input type="text" class="form-control rounded-pill" :placeholder="$t('search_placeholder')"
@@ -14,7 +14,6 @@
                   </div>
                 </div>
 
-                <!-- Filter Buttons (Responsive) -->
                 <div class="col-lg-12 pt-4 pb-2">
                   <div class="d-flex flex-wrap gap-1">
                     <button v-for="filter in filters" :key="filter.id" type="button" class="btn btn-sm btn-round" :class="{
@@ -29,7 +28,7 @@
             </div>
           </div>
 
-          <!-- Jobs List -->
+
           <div v-for="(job, index) in filteredJobs" :key="index" class="col-lg-4 col-md-6 mb-4">
             <div class="card mt-3 job-card mx-4 position-relative">
               <div class="job-image-wrapper position-relative rounded-3">
@@ -58,7 +57,7 @@ export default {
   data() {
     return {
       searchQuery: "",
-      activeFilter: "all", // Start with "All" selected
+      activeFilter: "all", 
       filters: [
         { id: "all", label: "All" },
         { id: "hr", label: "HR" },

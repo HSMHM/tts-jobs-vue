@@ -1,5 +1,4 @@
 <template>
-    <!-- Main content area -->
     <router-view></router-view>
 </template>
 
@@ -14,9 +13,8 @@ export default {
     const { t, locale } = useI18n();
     const savedLanguage = localStorage.getItem('language');
 
-    // Set initial language from local storage
     if (savedLanguage) {
-      locale.value = savedLanguage; // Use the reactive locale property
+      locale.value = savedLanguage;
     }
 
     const updateDocumentLanguage = () => {
@@ -24,7 +22,6 @@ export default {
       document.documentElement.dir = locale.value === 'ar' ? 'rtl' : 'ltr';
     };
 
-    // Update language and title on component mount
     onMounted(() => {
       updateDocumentLanguage();
     });

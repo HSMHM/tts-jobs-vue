@@ -9,7 +9,7 @@
         <div class="modal-body">
           <form @submit.prevent="submitForm">
             <div class="row">
-              <!-- Full Name -->
+
               <div class="mb-3 col-md-6">
                 <label for="fullName" class="form-label">
                   {{ $t('job_application.full_name') }}
@@ -18,7 +18,6 @@
                 <input type="text" v-model="formData.fullName" class="form-control" id="fullName" required />
               </div>
 
-              <!-- Academic Qualification -->
               <div class="mb-3 col-md-6">
                 <label for="qualification" class="form-label">
                   {{ $t('job_application.qualification') }}
@@ -32,7 +31,6 @@
                 </select>
               </div>
 
-              <!-- Date of Birth -->
               <div class="mb-3 col-md-6">
                 <label for="dob" class="form-label">
                   {{ $t('job_application.date_of_birth') }}
@@ -41,7 +39,6 @@
                 <input type="date" v-model="formData.dob" class="form-control" id="dob" required />
               </div>
 
-              <!-- Gender -->
               <div class="mb-3 col-md-6">
                 <label class="form-label">
                   {{ $t('job_application.gender') }}
@@ -55,7 +52,6 @@
                 </div>
               </div>
 
-              <!-- Experience Year -->
               <div class="mb-3 col-md-6">
                 <label for="experience" class="form-label">
                   {{ $t('job_application.experience') }}
@@ -65,7 +61,6 @@
                   required />
               </div>
 
-              <!-- Email -->
               <div class="mb-3 col-md-6">
                 <label for="email" class="form-label">
                   {{ $t('job_application.email') }}
@@ -74,7 +69,6 @@
                 <input type="email" v-model="formData.email" class="form-control" id="email" required />
               </div>
 
-              <!-- Contact Number -->
               <div class="mb-3 col-md-6">
                 <label for="contactNumber" class="form-label">
                   {{ $t('job_application.contact_number') }}
@@ -83,7 +77,6 @@
                 <input type="tel" v-model="formData.contactNumber" class="form-control" id="contactNumber" required />
               </div>
 
-              <!-- Country -->
               <div class="mb-3 col-md-6">
                 <label for="country" class="form-label">
                   {{ $t('job_application.country') }}
@@ -97,7 +90,6 @@
                 </select>
               </div>
 
-              <!-- Resume File (PDF only) -->
               <div class="mb-3 col-md-6">
                 <label for="resume" class="form-label">
                   {{ $t('job_application.resume') }}
@@ -150,7 +142,7 @@ export default defineComponent({
         email: '',
         contactNumber: '',
         country: '',
-        resume: null, // Base64-encoded resume file
+        resume: null, 
       },
       loading: false,
     };
@@ -165,8 +157,8 @@ export default defineComponent({
         this.formData.qualification === 'bachelor'
           ? 'بكالوريوس'
           : this.formData.qualification === 'master'
-            ? 'ماجستير'
-            : 'دكتوراه';
+          ? 'ماجستير'
+          : 'دكتوراه';
 
       const countryLocalized = this.countryList.find(
         country => country.code === this.formData.country
@@ -237,27 +229,27 @@ export default defineComponent({
           gender: this.localizedFormData.gender,
           experience: this.formData.experience,
           country: this.localizedFormData.country,
-          resume: this.formData.resume, // Base64-encoded resume
+          resume: this.formData.resume, 
         };
 
-        // Endpoint for email submission
+        
         const emailEndpoint = process.env.NODE_ENV === 'production'
           ? '/.netlify/functions/sendEmail'
           : '/api/submit-form';
 
+        
         const googleScriptEndpoint = process.env.NODE_ENV === 'production'
           ? '/.netlify/functions/forward-to-google-script'
           : '/api/forward-to-google-script';
 
-
-        // Sending data to email endpoint
+      
         await axios.post(emailEndpoint, formDataToSend, {
           headers: {
             'Content-Type': 'application/json',
           },
         });
 
-        // Sending data to Google Apps Script
+       
         await axios.post(googleScriptEndpoint, formDataToSend, {
           headers: {
             'Content-Type': 'application/json',
@@ -290,6 +282,7 @@ export default defineComponent({
   },
 });
 </script>
+
 
 <style scoped>
 .swal-rtl .swal2-popup {

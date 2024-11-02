@@ -5,7 +5,6 @@
       <div class="overlay"></div>
     </div>
     <div class="bg-gradient-primary position-relative mx-xxl-8 mx-xl-4 mx-lg-3 mx-3 py-2 z-index-2 border-radius-xl mt-n9">
-      <img src="/img/shapes/waves-white.svg" alt="pattern-lines" class="position-absolute opacity-6 start-0 top-0 w-100" />
       <div class="container position-relative">
         <div class="row justify-content-center align-items-center">
           <div class="col-lg-6 col-md-8 text-start py-5 me-auto position-relative">

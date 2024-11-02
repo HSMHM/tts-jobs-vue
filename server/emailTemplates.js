@@ -1,45 +1,52 @@
-// server/emailTemplates.js
 
 module.exports = {
-    // Admin email template
-    adminEmail: ({ fullName, email, jobTitle, contactNumber }) => `
-      <!DOCTYPE html>
-      <html lang="ar" dir="rtl">
-        <head>
-          <meta charset="UTF-8">
-          <title>طلب توظيف جديد</title>
-          <style>
-            /* Styles here */
-            * { font-family: "Tajawal", sans-serif; direction: rtl; }
-            body { background-color: #f2f2f2; padding: 20px; display: flex; justify-content: center; align-items: center; }
-            .email-container { max-width: 600px; background-color: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 0 auto; text-align: center; }
-            .email-header { background: linear-gradient(135deg, #7928ca, #ff0080); color: white; padding: 20px; border-radius: 10px 10px 0 0; }
-            .email-body { padding: 20px; }
-            .email-footer { background-color: #f8f9fa; padding: 10px; font-size: 0.9em; color: #6c757d; border-radius: 0 0 10px 10px; }
-          </style>
-        </head>
-        <body>
-          <div class="email-container">
-            <div class="email-header">
-              <h4>طلب توظيف جديد</h4>
-              <p>تم تقديم طلب توظيف جديد من:</p>
-            </div>
-            <div class="email-body">
-              <p><strong>الاسم:</strong> ${fullName}</p>
-              <p><strong>البريد الإلكتروني:</strong> ${email}</p>
-              <p><strong>رقم التواصل:</strong> ${contactNumber}</p>
-              <p><strong>الوظيفة:</strong> ${jobTitle}</p>
-              <p>شكراً لكم.</p>
-            </div>
-            <div class="email-footer">
-              <small>&copy; ${new Date().getFullYear()} شركة التحول التقني. جميع الحقوق محفوظة.</small>
-            </div>
+    adminEmail: ({ fullName, email, jobTitle, contactNumber, sheetLink }) => `
+    <!DOCTYPE html>
+    <html lang="ar" dir="rtl">
+      <head>
+        <meta charset="UTF-8">
+        <title>طلب توظيف جديد</title>
+        <style>
+          * { font-family: "Tajawal", sans-serif; direction: rtl; }
+          body { background-color: #f2f2f2; padding: 20px; display: flex; justify-content: center; align-items: center; }
+          .email-container { max-width: 600px; background-color: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 0 auto; text-align: center; }
+          .email-header { background: linear-gradient(135deg, #7928ca, #ff0080); color: white; padding: 20px; border-radius: 10px 10px 0 0; }
+          .email-body { padding: 20px; }
+          .email-footer { background-color: #f8f9fa; padding: 10px; font-size: 0.9em; color: #6c757d; border-radius: 0 0 10px 10px; }
+          .button {
+            display: inline-block;
+            padding: 12px 24px;
+            margin: 10px 0;
+            color: #ffffff !important;
+            text-decoration: none;
+            border-radius: 30px;
+            background-image: linear-gradient(-310deg, #480683 0%, #ce0886 100%);
+          }
+        </style>
+      </head>
+      <body>
+        <div class="email-container">
+          <div class="email-header">
+            <h4>طلب توظيف جديد</h4>
+            <p>تم تقديم طلب توظيف جديد من:</p>
           </div>
-        </body>
-      </html>
-    `,
+          <div class="email-body">
+            <p><strong>الاسم:</strong> ${fullName}</p>
+            <p><strong>البريد الإلكتروني:</strong> ${email}</p>
+            <p><strong>رقم التواصل:</strong> ${contactNumber}</p>
+            <p><strong>الوظيفة:</strong> ${jobTitle}</p>
+            <a href="${sheetLink}" class="button">جدول الطلبات</a>
+            <p>شكراً لك.</p>
+          </div>
+          <div class="email-footer">
+            <small>&copy; ${new Date().getFullYear()} شركة التحول التقني. جميع الحقوق محفوظة.</small>
+          </div>
+        </div>
+      </body>
+    </html>
+  `,
+ 
   
-    // User email template in Arabic
     userEmail_ar: ({ fullName, jobTitle }) => `
       <!DOCTYPE html>
       <html lang="ar" dir="rtl">
@@ -74,7 +81,6 @@ module.exports = {
       </html>
     `,
   
-    // User email template in English
     userEmail: ({ fullName, jobTitle }) => `
       <!DOCTYPE html>
       <html lang="en">

@@ -76,13 +76,6 @@
     "/assets/slick-DWzRxEMf.ttf",
     "/assets/slick.svg"
   ],
-  "../../../../img/shapes/waves-white.svg": [
-    "/assets/ajax-loader.gif",
-    "/assets/slick-Bi9J8BMx.eot",
-    "/assets/slick-BlUtDIuC.woff",
-    "/assets/slick-DWzRxEMf.ttf",
-    "/assets/slick.svg"
-  ],
   "index.html": [
     "/assets/ajax-loader.gif",
     "/assets/slick-Bi9J8BMx.eot",
@@ -692,7 +685,7 @@
     "/assets/slick-DWzRxEMf.ttf",
     "/assets/slick.svg"
   ],
-  "src/components/job/JobApplicationModal.vue?vue&type=style&index=0&scoped=4256af0a&lang.css": [
+  "src/components/job/JobApplicationModal.vue?vue&type=style&index=0&scoped=cab76eb0&lang.css": [
     "/assets/ajax-loader.gif",
     "/assets/slick-Bi9J8BMx.eot",
     "/assets/slick-BlUtDIuC.woff",
