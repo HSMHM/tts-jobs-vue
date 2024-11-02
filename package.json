@@ -8,7 +8,7 @@
     "preview": "vite preview",
     "build:ssg": "vite-ssg build",
     "dev:ssg": "vite-ssg dev",
-    "serve:ssg": "vite preview",
+    "preview:ssg": "vite-ssg preview",
     "start": "node server/app.js"
   },
   "dependencies": {
@@ -43,8 +43,8 @@
     "handlebars": "^4.7.8",
     "jsonwebtoken": "^9.0.2",
     "lottie-web": "^5.12.2",
-    "nodemailer": "^6.7.2",
-    "nodemailer-express-handlebars": "^3.1.0",
+    "nodemailer": "^6.4.18",
+    "nodemailer-express-handlebars": "^5.0.0",
     "nouislider": "^15.8.1",
     "parallax-js": "^3.1.0",
     "popper.js": "^1.16.1",
