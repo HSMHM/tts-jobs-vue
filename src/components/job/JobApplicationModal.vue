@@ -61,7 +61,8 @@
                   {{ $t('job_application.experience') }}
                   <span class="text-danger">*</span>
                 </label>
-                <input type="number" v-model="formData.experience" class="form-control" id="experience" min="0" required />
+                <input type="number" v-model="formData.experience" class="form-control" id="experience" min="0"
+                  required />
               </div>
 
               <!-- Email -->
@@ -109,7 +110,8 @@
               <div class="col-md-12 text-center">
                 <button type="submit" class="btn bg-gradient-primary text-white btn-round" :disabled="loading">
                   <span v-if="loading">{{ $t('job_application.loading') }}</span>
-                  <span v-if="loading" class="ms-3 spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                  <span v-if="loading" class="ms-3 spinner-border spinner-border-sm" role="status"
+                    aria-hidden="true"></span>
                   <span v-else>{{ $t('job_application.submit') }}</span>
                 </button>
               </div>
@@ -163,8 +165,8 @@ export default defineComponent({
         this.formData.qualification === 'bachelor'
           ? 'بكالوريوس'
           : this.formData.qualification === 'master'
-          ? 'ماجستير'
-          : 'دكتوراه';
+            ? 'ماجستير'
+            : 'دكتوراه';
 
       const countryLocalized = this.countryList.find(
         country => country.code === this.formData.country
@@ -243,8 +245,10 @@ export default defineComponent({
           ? '/.netlify/functions/sendEmail'
           : '/api/submit-form';
 
-        // Endpoint for the Google Apps Script proxy
-        const googleScriptEndpoint = '/api/forward-to-google-script';
+        const googleScriptEndpoint = process.env.NODE_ENV === 'production'
+          ? '/.netlify/functions/forward-to-google-script'
+          : '/api/forward-to-google-script';
+
 
         // Sending data to email endpoint
         await axios.post(emailEndpoint, formDataToSend, {
