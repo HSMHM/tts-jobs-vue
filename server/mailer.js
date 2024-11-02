@@ -1,11 +1,6 @@
 const nodemailer = require('nodemailer');
-const path = require('path');
+const emailTemplates = require('./emailTemplates'); // Import the email templates
 require('dotenv').config({ path: '../.env' });
-
-// Check if running in Netlify functions environment
-const isNetlify = process.env.NETLIFY_ENV === 'true';
-const viewsPath = isNetlify ? path.join(__dirname, 'views') : path.join(__dirname, '../server/views');
-console.log(`Using views path: ${viewsPath}`); // Log the path for debugging
 
 const transporter = nodemailer.createTransport({
   host: process.env.MAIL_HOST,
@@ -21,38 +16,21 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-// Import and configure `nodemailer-express-handlebars`
-const initializeHandlebars = async () => {
-  const { default: hbs } = await import('nodemailer-express-handlebars');
-  transporter.use(
-    'compile',
-    hbs({
-      viewEngine: {
-        extName: '.hbs',
-        partialsDir: viewsPath,
-        layoutsDir: viewsPath,
-        defaultLayout: false,
-      },
-      viewPath: viewsPath,
-      extName: '.hbs',
-    })
-  );
-};
-
-// Initialize handlebars configuration only once
-initializeHandlebars().catch((error) => {
-  console.error('Failed to configure handlebars:', error);
-});
-
-// Define the sendMail function
-const sendMail = async (to, subject, template, context) => {
+const sendMail = async (to, subject, templateName, context) => {
   try {
+    // Check if the template function exists
+    if (typeof emailTemplates[templateName] !== 'function') {
+      throw new Error(`Template "${templateName}" not found in emailTemplates.js`);
+    }
+    
+    // Get the email content by calling the template function with the context
+    const html = emailTemplates[templateName](context);
+
     const info = await transporter.sendMail({
       from: `"${process.env.MAIL_FROM_NAME}" <${process.env.MAIL_FROM_ADDRESS}>`,
       to,
       subject,
-      template,
-      context,
+      html, // Use the HTML content directly
     });
     console.log(`Email sent: ${info.messageId}`);
     return info;
