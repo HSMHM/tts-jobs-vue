@@ -120,7 +120,6 @@
     </div>
   </div>
 </template>
-
 <script>
 import { defineComponent } from 'vue';
 import Swal from 'sweetalert2';
@@ -149,7 +148,7 @@ export default defineComponent({
         email: '',
         contactNumber: '',
         country: '',
-        resume: null,
+        resume: null, // Base64-encoded resume file
       },
       loading: false,
     };
@@ -157,6 +156,26 @@ export default defineComponent({
   computed: {
     countryList() {
       return Object.values(this.$i18n.messages[this.$i18n.locale]?.countries || []);
+    },
+    localizedFormData() {
+      const genderLocalized = this.formData.gender === 'male' ? 'ذكر' : 'أنثى';
+      const qualificationLocalized =
+        this.formData.qualification === 'bachelor'
+          ? 'بكالوريوس'
+          : this.formData.qualification === 'master'
+          ? 'ماجستير'
+          : 'دكتوراه';
+
+      const countryLocalized = this.countryList.find(
+        country => country.code === this.formData.country
+      )?.name || this.formData.country;
+
+      return {
+        ...this.formData,
+        gender: genderLocalized,
+        qualification: qualificationLocalized,
+        country: countryLocalized,
+      };
     },
   },
   methods: {
@@ -166,7 +185,11 @@ export default defineComponent({
     handleFileUpload(event) {
       const file = event.target.files[0];
       if (file && file.type === 'application/pdf') {
-        this.formData.resume = file;
+        const reader = new FileReader();
+        reader.onload = () => {
+          this.formData.resume = reader.result.split(',')[1];
+        };
+        reader.readAsDataURL(file);
       } else {
         this.formData.resume = null;
         Swal.fire({
@@ -207,14 +230,35 @@ export default defineComponent({
           contactNumber: this.formData.contactNumber,
           jobTitle: this.jobTitle,
           language: this.$i18n.locale,
+          qualification: this.localizedFormData.qualification,
+          dob: this.formData.dob,
+          gender: this.localizedFormData.gender,
+          experience: this.formData.experience,
+          country: this.localizedFormData.country,
+          resume: this.formData.resume, // Base64-encoded resume
         };
 
-        // Choose endpoint based on environment
-        const endpoint = process.env.NODE_ENV === 'production'
+        // Endpoint for email submission
+        const emailEndpoint = process.env.NODE_ENV === 'production'
           ? '/.netlify/functions/sendEmail'
           : '/api/submit-form';
 
-        await axios.post(endpoint, formDataToSend);
+        // Endpoint for the Google Apps Script proxy
+        const googleScriptEndpoint = '/api/forward-to-google-script';
+
+        // Sending data to email endpoint
+        await axios.post(emailEndpoint, formDataToSend, {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
+
+        // Sending data to Google Apps Script
+        await axios.post(googleScriptEndpoint, formDataToSend, {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
 
         Swal.fire({
           text: this.$t('job_application.form_submission_message', { email: this.formData.email }),

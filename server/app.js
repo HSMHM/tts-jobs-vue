@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const sendMail = require('./mailer'); // Import sendMail directly
+const axios = require('axios');
 const app = express();
 
 // Check required environment variables
@@ -37,7 +38,7 @@ app.post('/api/submit-form', async (req, res) => {
     console.log(`User email sent to ${email} for job: ${jobTitle}`);
 
     // Send email to the admin with a dynamic subject
-    await sendMail('hassan@tts.sa', adminSubject, adminTemplate, { fullName, email, jobTitle ,contactNumber });
+    await sendMail('hassan@tts.sa', adminSubject, adminTemplate, { fullName, email, jobTitle, contactNumber });
     console.log('Admin notification email sent.');
 
     res.status(200).json({ message: 'Form submitted and emails sent successfully.' });
@@ -46,6 +47,24 @@ app.post('/api/submit-form', async (req, res) => {
     res.status(500).json({ error: 'Failed to send emails. Please try again later.' });
   }
 });
+
+// Proxy route to handle Google Apps Script request
+app.post('/api/forward-to-google-script', async (req, res) => {
+  const googleScriptUrl = 'https://script.google.com/macros/s/AKfycbxfUAB-uPsPoPf_zKSW2ltTgytThmGzfdiESQj4dB5ajKCLHY2KD7NCrTUB0F21XIkk/exec'; // Replace with your actual Google Apps Script URL
+
+  try {
+    const response = await axios.post(googleScriptUrl, req.body, {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    res.status(response.status).json(response.data);
+  } catch (error) {
+    console.error('Error with Google Apps Script request:', error.message);
+    res.status(500).json({ error: 'Failed to send data to Google Apps Script' });
+  }
+});
+
 
 // Serve static files in production
 if (process.env.NODE_ENV === 'production') {
