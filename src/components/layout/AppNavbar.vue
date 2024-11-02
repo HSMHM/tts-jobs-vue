@@ -9,9 +9,12 @@
         <div class="ms-auto" id="navigation">
           <ul class="navbar-nav d-block">
             <li class="nav-item">
-              <a :href="switchLanguageHref" class="btn btn-outline-white btn-round mb-0 me-1">
+              <div class="navbar-brand navbar-brand-gptw  font-weight-bolder ms-sm-3 w-auto">
+                <img :src="gptwBrandImg" alt="Great Place to Work" />
+              </div>
+              <!-- <a :href="switchLanguageHref" class="btn btn-outline-white btn-round mb-0 me-1">
                 {{ $t('switch_language') }} <font-awesome-icon :icon="['fas', 'earth-americas']" />
-              </a>
+              </a> -->
             </li>
           </ul>
         </div>
@@ -23,11 +26,13 @@
 <script>
 import logoWhite from "/img/logos/tts-jobs/logo-white.png";
 import logoDark from "/img/logos/tts-jobs/logo-dark.png";
+import logoGptw from "/img/logos/gptw.png";
 
 export default {
   data() {
     return {
       navbarBrandImg: logoWhite,
+      gptwBrandImg: logoGptw,
       scrolled: false,
     };
   },
