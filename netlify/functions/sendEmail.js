@@ -7,7 +7,7 @@ exports.handler = async function (event) {
   }
 
   // Parse the request body
-  const { fullName, email, jobTitle,contactNumber, language } = JSON.parse(event.body);
+  const { fullName, email, jobTitle, contactNumber, language } = JSON.parse(event.body);
 
   // Determine email subjects based on language
   const userSubject = language === 'ar' ? 'شكراً لتقديم طلبك' : 'Thank you for your application';
@@ -16,16 +16,24 @@ exports.handler = async function (event) {
     : 'New Job Application Submitted';
 
   try {
+    // Prepare context data for the user email
+    const userContext = { fullName, jobTitle };
+    console.log('Sending user email with context:', userContext);
+
     // Send email to the user
     await sendMail(
       email,
       userSubject,
       language === 'ar' ? 'userEmail_ar' : 'userEmail',
-      { fullName, jobTitle }
+      userContext
     );
 
+    // Prepare context data for the admin email
+    const adminContext = { fullName, email, jobTitle, contactNumber };
+    console.log('Sending admin email with context:', adminContext);
+
     // Send email to the admin
-    await sendMail('hassan@tts.sa', adminSubject, 'adminEmail', { fullName, email, jobTitle, contactNumber });
+    await sendMail('hassan@tts.sa', adminSubject, 'adminEmail', adminContext);
 
     // Respond with a success message
     return { statusCode: 200, body: 'Emails sent' };
