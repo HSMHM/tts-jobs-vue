@@ -209,7 +209,12 @@ export default defineComponent({
           language: this.$i18n.locale,
         };
 
-        await axios.post('/api/submit-form', formDataToSend);
+        // Choose endpoint based on environment
+        const endpoint = process.env.NODE_ENV === 'production'
+          ? '/.netlify/functions/sendEmail'
+          : '/api/submit-form';
+
+        await axios.post(endpoint, formDataToSend);
 
         Swal.fire({
           text: this.$t('job_application.form_submission_message', { email: this.formData.email }),
