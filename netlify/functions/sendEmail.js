@@ -1,11 +1,9 @@
-const sendMail = require('../../server/mailer'); // Import the mailer from server
+const sendMail = require('../../server/mailer');
 const path = require('path');
 
-// Modify the `viewsPath` dynamically within this file as well to ensure the right path is used
+// Determine the correct views path based on environment
 const isNetlify = __dirname.includes('netlify/functions');
 const viewsPath = isNetlify ? path.join(__dirname, 'views') : path.join(__dirname, '../server/views');
-process.env.VIEWS_PATH = viewsPath; // Set an environment variable to pass the views path
-
 console.log(`Using views path in sendEmail.js: ${viewsPath}`);
 
 exports.handler = async function (event) {
@@ -35,11 +33,12 @@ exports.handler = async function (event) {
       email,
       userSubject,
       language === 'ar' ? 'userEmail_ar' : 'userEmail',
-      userContext
+      userContext,
+      viewsPath  // Pass viewsPath as an argument
     );
 
     // Send email to the admin
-    await sendMail('hassan@tts.sa', adminSubject, 'adminEmail', adminContext);
+    await sendMail('hassan@tts.sa', adminSubject, 'adminEmail', adminContext, viewsPath); // Pass viewsPath as an argument
 
     return { statusCode: 200, body: 'Emails sent' };
   } catch (error) {
