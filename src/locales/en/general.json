@@ -66,6 +66,10 @@
         "resume_error": "Please upload a valid PDF file.",
         "invalid_file_type": "Invalid File Type",
         "submit": "Submit Application",
-        "required_resume": "Resume Required"
+        "required_resume": "Resume Required",
+        "form_submission_message": "The request has been sent successfully. You will be notified of the status via email: {email}",
+        "email_error": "There was an error sending the request. Please try again later.",
+        "confirm_button_text": "Close",
+        "loading": "Sending request..."
     }
 }

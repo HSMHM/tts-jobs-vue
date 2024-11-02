@@ -65,6 +65,11 @@
     "resume_error": "يرجى تحميل ملف PDF صالح.",
     "invalid_file_type": "نوع الملف غير صالح",
     "submit": "إرسال الطلب",
-    "required_resume": "السيرة الذاتية مطلوبة"
+    "required_resume": "السيرة الذاتية مطلوبة",
+    "form_submission_message": "تم إرسال الطلب بنجاح، سيتم إشعاركم بحالة الطلب على البريد الإلكتروني: {email}",
+    "email_error": "هناك خطأ في إرسال الطلب، حاول مرة أخرى لاحقًا",
+    "confirm_button_text": "إغلاق",
+    "loading": "جارٍ  إرسال الطلب"
   }
+
 }

@@ -30,6 +30,12 @@ export default defineConfig(({ mode }) => {
     server: {
       port: 3000,
       open: true,
+      proxy: {
+        '/api': {
+          target: 'http://localhost:4000',
+          changeOrigin: true,
+        },
+      },
     },
     preview: {
       port: 5000,
@@ -59,12 +65,10 @@ export default defineConfig(({ mode }) => {
           });
         });
 
-        // Include 404 pages in both languages
         generatedRoutes.push('/404', '/en/404');
         return generatedRoutes;
       },
       onFinished: () => {
-        // Move 404 pages to standalone files
         const paths = [
           { from: 'dist/404/index.html', to: 'dist/404.html' },
           { from: 'dist/en/404/index.html', to: 'dist/en/404.html' },
