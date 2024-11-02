@@ -18,8 +18,7 @@ const transporter = nodemailer.createTransport({
 });
 
 // Determine the path to the views directory based on the environment
-// Check if running in a Netlify environment by using process.env.NETLIFY or directory structure check
-const isNetlify = process.env.NETLIFY === 'true' || __dirname.includes('netlify/functions');
+const isNetlify = __dirname.includes('netlify/functions');
 const viewsPath = isNetlify ? path.join(__dirname, 'views') : path.join(__dirname, '../server/views');
 console.log(`Using views path: ${viewsPath}`); // Log the path for debugging
 
