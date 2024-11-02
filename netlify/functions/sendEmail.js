@@ -1,4 +1,12 @@
 const sendMail = require('../../server/mailer'); // Import the mailer from server
+const path = require('path');
+
+// Modify the `viewsPath` dynamically within this file as well to ensure the right path is used
+const isNetlify = __dirname.includes('netlify/functions');
+const viewsPath = isNetlify ? path.join(__dirname, 'views') : path.join(__dirname, '../server/views');
+process.env.VIEWS_PATH = viewsPath; // Set an environment variable to pass the views path
+
+console.log(`Using views path in sendEmail.js: ${viewsPath}`);
 
 exports.handler = async function (event) {
   // Only allow POST requests
