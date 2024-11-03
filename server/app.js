@@ -26,13 +26,13 @@ app.post('/api/submit-form', async (req, res) => {
 
     const userSubject = language === 'ar' ? 'شكراً لتقديم طلبك' : 'Thank you for your application';
     const adminSubject = language === 'ar'
-      ? 'تم تقديم طلب توظيف جديد'
-      : 'New Job Application Submitted';
+      ? 'طلب توظيف'
+      : 'Application Submitted';
 
     await sendMail(email, userSubject, userTemplate, { fullName, jobTitle });
     console.log(`User email sent to ${email} for job: ${jobTitle}`);
 
-    await sendMail('hassan@tts.sa', adminSubject, adminTemplate, { fullName, email, jobTitle, contactNumber, sheetLink });
+    await sendMail('hr@tts.sa', adminSubject, adminTemplate, { fullName, email, jobTitle, contactNumber, sheetLink });
     console.log('Admin notification email sent.');
 
     res.status(200).json({ message: 'Form submitted and emails sent successfully.' });

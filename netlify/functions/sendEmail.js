@@ -16,7 +16,7 @@ exports.handler = async function (event) {
     } = JSON.parse(event.body);
 
     const userSubject = language === 'ar' ? 'شكراً لتقديم طلبك' : 'Thank you for your application';
-    const adminSubject = language === 'ar' ? 'تم تقديم طلب توظيف جديد' : 'New Job Application Submitted';
+    const adminSubject = language === 'ar' ? 'طلب توظيف' : 'Application Submitted';
 
     const userTemplate = language === 'ar' ? 'userEmail_ar' : 'userEmail';
     const adminTemplate = 'adminEmail';
@@ -25,7 +25,7 @@ exports.handler = async function (event) {
 
     await sendMail(email, userSubject, userTemplate, { fullName, jobTitle });
 
-    await sendMail('hassan@tts.sa', adminSubject, adminTemplate, { fullName, email, jobTitle, contactNumber, sheetLink });
+    await sendMail('hr@tts.sa', adminSubject, adminTemplate, { fullName, email, jobTitle, contactNumber, sheetLink });
 
     return { statusCode: 200, body: 'Emails sent' };
   } catch (error) {
